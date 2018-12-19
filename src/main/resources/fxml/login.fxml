@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="572.0" layoutX="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="83.0" layoutY="265.0" prefHeight="25.0" prefWidth="47.0" text="账号" textFill="#31555b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="162.0" text="天  庭  神  界  连  锁  超  市" textFill="#1e5580">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="357.0" prefHeight="25.0" prefWidth="47.0" text="密码" textFill="#31555b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="228.0" layoutY="351.0" prefHeight="35.0" prefWidth="219.0" />
+      <TextField layoutX="229.0" layoutY="262.0" prefHeight="35.0" prefWidth="219.0" />
+      <ImageView fitHeight="119.0" fitWidth="125.0" layoutX="222.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="171.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../2.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="171.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../6.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="161.0" layoutY="495.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="241.0" style="-fx-background-color: rgb(31,200,253);" text="登        录" textFill="#f8f0f0">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <CheckBox layoutX="111.0" layoutY="428.0" mnemonicParsing="false" text="记住密码" textFill="#31699a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="383.0" layoutY="429.0" prefHeight="24.0" prefWidth="78.0" text="注册账号" textFill="#2b6190">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="564.0" text="- 其 他 方 式 登 录 -" textFill="#195265">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="187.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="58.0" layoutX="312.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../5.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
