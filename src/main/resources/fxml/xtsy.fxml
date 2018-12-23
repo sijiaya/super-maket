@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="881.0" prefWidth="1247.0" style="-fx-background-color: #88d3f8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutY="-8.0" prefHeight="44.0" prefWidth="1247.0" style="-fx-background-color: #365efb;" textFill="#e0e0de" />
+      <AnchorPane layoutY="29.0" prefHeight="131.0" prefWidth="1247.0" style="-fx-background-color: #41b6f4;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/a.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="103.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/b.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="55.0" layoutX="188.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/c.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="272.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/d.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="866.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/e.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="427.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/f.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="501.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/g.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="577.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/h.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="651.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/i.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="723.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/j.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="61.0" layoutX="798.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/k.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="347.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/l.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="929.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/m.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="999.0" layoutY="1.0" prefHeight="115.0" prefWidth="248.0" text="TTSJ 收银系统">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="81.0" text="商品管理" />
+            <Label layoutX="108.0" layoutY="81.0" text="拉取商品" />
+            <Label layoutX="188.0" layoutY="81.0" text="商品销售" />
+            <Label layoutX="275.0" layoutY="81.0" text="销售单" />
+            <Label layoutX="350.0" layoutY="81.0" text="库存管理" />
+            <Label layoutX="430.0" layoutY="81.0" text="会员管理" />
+            <Label layoutX="506.0" layoutY="81.0" text="挂单" />
+            <Label layoutX="585.0" layoutY="81.0" text="取单" />
+            <Label layoutX="656.0" layoutY="81.0" text="交班" />
+            <Label layoutX="730.0" layoutY="81.0" text="设置" />
+            <Label layoutX="803.0" layoutY="81.0" text="帮助" />
+            <Label layoutX="858.0" layoutY="81.0" text="订单管理" />
+            <Label layoutX="945.0" layoutY="81.0" text="进货" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="18.0" layoutY="217.0" prefHeight="480.0" prefWidth="1210.0" style="-fx-background-color: #e0e0de;" />
+      <Label layoutX="212.0" layoutY="173.0" text="商品条形码">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="386.0" layoutY="177.0" text="商品现价">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="173.0" text="商品原价">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="723.0" layoutY="177.0" text="商品规格">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="907.0" layoutY="173.0" text="商品数量">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1066.0" layoutY="173.0" text="小计（元）">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="173.0" text="商品名称">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="725.0" text="数量（件)：" />
+      <Button layoutX="288.0" layoutY="720.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="80.0" style="-fx-background-color: #41b6f4;" text="移除商品" textFill="#390606" />
+      <Button layoutX="374.0" layoutY="722.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="84.0" style="-fx-background-color: #41b6f4;" text="网上订单" />
+      <TextField layoutX="109.0" layoutY="798.0" prefHeight="36.0" prefWidth="359.0" text="条形码/商品名称" />
+      <TextField layoutX="150.0" layoutY="720.0" prefHeight="43.0" prefWidth="125.0" />
+      <Label layoutX="309.0" layoutY="763.0" text="Delete" />
+      <Label alignment="CENTER_RIGHT" layoutX="437.0" layoutY="798.0" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #41b6f4;" text="F2" />
+      <TextField layoutX="523.0" layoutY="727.0" />
+      <TextField layoutX="522.0" layoutY="770.0" />
+      <TextField layoutX="523.0" layoutY="808.0" prefHeight="30.0" prefWidth="105.0" />
+      <TextField layoutX="628.0" layoutY="808.0" prefHeight="30.0" prefWidth="99.0" />
+      <TextField layoutX="727.0" layoutY="808.0" prefHeight="30.0" prefWidth="105.0" />
+      <Button layoutX="745.0" layoutY="730.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="84.0" style="-fx-background-color: #41b6f4;" text="新增会员" />
+      <Label layoutX="779.0" layoutY="773.0" text="F3" />
+      <Button layoutX="935.0" layoutY="726.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="69.0" style="-fx-background-color: #41b6f4;" text="结算">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="1020.0" layoutY="725.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="202.0" style="-fx-background-color: #41b6f4;" text="总金额">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Button>
+      <Label layoutX="932.0" layoutY="808.0" text="（空格键）" />
+      <Label layoutX="1102.0" layoutY="813.0" text="0.00元" />
+   </children>
+</AnchorPane>
