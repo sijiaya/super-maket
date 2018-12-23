@@ -2,10 +2,7 @@ package com.soft1841.sm.controller;
 
 import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.LoginDAO;
-import com.soft1841.sm.entity.Admin;
 import com.soft1841.sm.utils.DAOFactory;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,19 +12,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import sun.plugin.javascript.navig.Anchor;
-
-import java.awt.print.Book;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
+    //登录接口方法的引用
     private LoginDAO loginDAO = DAOFactory.getLoginDAOInstance();
     private Stage primaryStage;
     @FXML
@@ -42,10 +34,14 @@ public class LoginController implements Initializable {
 
     }
     public void Login() throws SQLException, IOException, InterruptedException {
+        //获取用户输入的用户名以及密码
         String use = account.getText().trim();
         String psd = password.getText().trim();
+        //返回Entity类型，使用LoginDAO中的方法查询用户输入的账号
         Entity user = loginDAO.getUserByName(use);
+        //若用户输入的用户名不为空值，则执行
         if(null != user){
+            //如果用户输入的密码与数据库查询出来的数据中的密码一致，则登录成功并跳转
             if(user.getStr("password").equals(psd)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("信息提示");
@@ -58,17 +54,24 @@ public class LoginController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/xtsy.fxml"));
                 AnchorPane root = fxmlLoader.load();
                 Scene scene = new Scene(root);
-//                scene.getStylesheets().add("/css/login.css");
                 mainStage.getIcons().add(new Image("/img/logo.png"));
                 mainStage.setTitle("后台管理系统");
                 mainStage.setMaximized(true);
                 mainStage.setScene(scene);
                 mainStage.show();
             }else{
-                System.out.println("密码错误");
+                //如果用户输入的密码与数据库中根据用户名查询的密码不一致，则报错误
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("登录失败");
+                alert.setContentText("密码错误，登录失败");
+                alert.show();
             }
         }else{
-            System.out.println("用户名不存在");
+            //如果数据库中不存在该用户或者用户为空值，则警告
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("用户名不存在");
+            alert.setContentText("该用户名不存在，请重新输入");
+            alert.show();
         }
     }
 }
