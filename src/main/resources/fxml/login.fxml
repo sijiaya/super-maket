@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="730.0" fitWidth="572.0" layoutX="1.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../../login.png" />
+            <Image url="/img/logo.PNG" />
          </image>
       </ImageView>
       <Label layoutX="83.0" layoutY="265.0" prefHeight="25.0" prefWidth="47.0" text="账号" textFill="#31555b">
@@ -34,19 +31,20 @@
       <TextField layoutX="229.0" layoutY="262.0" prefHeight="35.0" prefWidth="219.0" />
       <ImageView fitHeight="119.0" fitWidth="125.0" layoutX="222.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../4.png" />
+            <Image url="/img/4.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="171.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../2.PNG" />
+            <Image url="/img/2.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="171.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../6.png" />
-         </image>
-      </ImageView>
+      <!--<ImageView fitHeight="35.0" fitWidth="38.0" layoutX="171.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">-->
+      <!--<image>-->
+      <!--<Image url="/img/6.png" />-->
+      <!--</image>-->
+      <!--</ImageView>
+-->
       <Button layoutX="161.0" layoutY="495.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="241.0" style="-fx-background-color: rgb(31,200,253);" text="登        录" textFill="#f8f0f0">
          <font>
             <Font size="23.0" />
@@ -69,12 +67,12 @@
       </Label>
       <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="187.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../3.png" />
+            <Image url="/img/3.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="70.0" fitWidth="58.0" layoutX="312.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../5.png" />
+            <Image url="/img/5.png" />
          </image>
       </ImageView>
    </children>
