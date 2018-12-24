@@ -47,8 +47,8 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="228.0" layoutY="351.0" prefHeight="35.0" prefWidth="219.0" />
-      <TextField layoutX="229.0" layoutY="262.0" prefHeight="35.0" prefWidth="219.0" />
+      <PasswordField layoutX="228.0" layoutY="351.0" prefHeight="35.0" prefWidth="219.0" fx:id="password"/>
+      <TextField layoutX="229.0" layoutY="262.0" prefHeight="35.0" prefWidth="219.0" fx:id="account" />
       <ImageView fitHeight="119.0" fitWidth="125.0" layoutX="222.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/img/4.png" />
@@ -59,13 +59,12 @@
             <Image url="/img/2.PNG" />
          </image>
       </ImageView>
-      <!--<ImageView fitHeight="35.0" fitWidth="38.0" layoutX="171.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">-->
-      <!--<image>-->
-      <!--<Image url="/img/6.png" />-->
-      <!--</image>-->
-      <!--</ImageView>
--->
-      <Button layoutX="161.0" layoutY="495.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="241.0" style="-fx-background-color: rgb(31,200,253);" text="登        录" textFill="#f8f0f0">
+ <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="171.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+  <image>
+<Image url="/img/6.png" />
+</image>
+</ImageView>
+      <Button layoutX="161.0" layoutY="495.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="241.0" style="-fx-background-color: rgb(31,200,253);" text="登        录" textFill="#f8f0f0" onAction="#Login">
          <font>
             <Font size="23.0" />
          </font>
