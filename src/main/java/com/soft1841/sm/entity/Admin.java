@@ -1,14 +1,10 @@
 package com.soft1841.sm.entity;
-
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 public class Admin {
-    private SimpleIntegerProperty id;
-    private SimpleStringProperty user;
-    private SimpleStringProperty password;
+    private Integer id;
+    private String user;
+    private String password;
 
-    public Admin(SimpleIntegerProperty id, SimpleStringProperty user, SimpleStringProperty password) {
+    public Admin(Integer id, String user, String password) {
         this.id = id;
         this.user = user;
         this.password = password;
@@ -17,48 +13,27 @@ public class Admin {
     public Admin() {
     }
 
-    public int getId() {
-        return id.get();
-    }
-
-    public SimpleIntegerProperty idProperty() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id.set(id);
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUser() {
-        return user.get();
-    }
-
-    public SimpleStringProperty userProperty() {
         return user;
     }
 
     public void setUser(String user) {
-        this.user.set(user);
+        this.user = user;
     }
 
     public String getPassword() {
-        return password.get();
-    }
-
-    public SimpleStringProperty passwordProperty() {
         return password;
     }
 
     public void setPassword(String password) {
-        this.password.set(password);
-    }
-
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "id=" + id +
-                ", user=" + user +
-                ", password=" + password +
-                '}';
+        this.password = password;
     }
 }

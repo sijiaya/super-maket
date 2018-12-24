@@ -2,7 +2,10 @@ package com.soft1841.sm.controller;
 
 import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.LoginDAO;
+import com.soft1841.sm.entity.Admin;
+import com.soft1841.sm.service.LoginService;
 import com.soft1841.sm.utils.DAOFactory;
+import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,9 +21,9 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
+public class LoginController{
     //登录接口方法的引用
-    private LoginDAO loginDAO = DAOFactory.getLoginDAOInstance();
+    private LoginService loginService = ServiceFactory.getLoginServiceInstance();
     private Stage primaryStage;
     @FXML
     private TextField account;
@@ -29,20 +32,15 @@ public class LoginController implements Initializable {
     public void setPrimaryStage(Stage primaryStage){
         this.primaryStage = primaryStage;
     }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
     public void Login() throws SQLException, IOException, InterruptedException {
         //获取用户输入的用户名以及密码
         String use = account.getText().trim();
         String psd = password.getText().trim();
         //返回Entity类型，使用LoginDAO中的方法查询用户输入的账号
-        Entity user = loginDAO.getUserByName(use);
+       boolean flag = loginService.login(use,psd);
         //若用户输入的用户名不为空值，则执行
-        if(null != user){
+        if(flag){
             //如果用户输入的密码与数据库查询出来的数据中的密码一致，则登录成功并跳转
-            if(user.getStr("password").equals(psd)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("信息提示");
                 alert.setContentText("恭喜你登陆成功，1S后您跳转到管理界面");
@@ -66,12 +64,5 @@ public class LoginController implements Initializable {
                 alert.setContentText("密码错误，登录失败");
                 alert.show();
             }
-        }else{
-            //如果数据库中不存在该用户或者用户为空值，则警告
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("用户名不存在");
-            alert.setContentText("该用户名不存在，请重新输入");
-            alert.show();
-        }
     }
 }

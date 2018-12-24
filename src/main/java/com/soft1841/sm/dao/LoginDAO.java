@@ -1,6 +1,7 @@
 package com.soft1841.sm.dao;
 
 import cn.hutool.db.Entity;
+import com.soft1841.sm.entity.Admin;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -21,5 +22,5 @@ public interface LoginDAO {
     * @return
     * @throws SQLException
     */
-   Entity getUserByName(String name) throws SQLException;
+   Admin getUserByName(String name) throws SQLException;
 }
