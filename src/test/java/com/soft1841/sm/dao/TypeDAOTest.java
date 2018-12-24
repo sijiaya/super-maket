@@ -12,7 +12,7 @@ public class TypeDAOTest {
     private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
     @Test
     public void selectType() throws SQLException {
-        List<Entity> typeList = typeDAO.selectType();
+        List<Entity> typeList = typeDAO.selectAllTypes();
         typeList.forEach(entity -> System.out.println(entity));
     }
 }

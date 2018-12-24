@@ -1,18 +1,18 @@
 package com.soft1841.sm.entity;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Seller {
+public class Member {
     private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleLongProperty workId = new SimpleLongProperty();
-    private final SimpleStringProperty password = new SimpleStringProperty();
+    private final SimpleStringProperty number = new SimpleStringProperty();
     private final SimpleStringProperty name = new SimpleStringProperty();
-    private final SimpleStringProperty avatar = new SimpleStringProperty();
     private final SimpleStringProperty address = new SimpleStringProperty();
+    private final SimpleStringProperty phone = new SimpleStringProperty();
+    private final SimpleIntegerProperty integral = new SimpleIntegerProperty();
 
-
-    public Seller() {
+    public Member() {
     }
 
     public long getId() {
@@ -27,28 +27,16 @@ public class Seller {
         this.id.set(id);
     }
 
-    public long getWorkId() {
-        return workId.get();
+    public String getNumber() {
+        return number.get();
     }
 
-    public SimpleLongProperty workIdProperty() {
-        return workId;
+    public SimpleStringProperty numberProperty() {
+        return number;
     }
 
-    public void setWorkId(long workId) {
-        this.workId.set(workId);
-    }
-
-    public String getPassword() {
-        return password.get();
-    }
-
-    public SimpleStringProperty passwordProperty() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password.set(password);
+    public void setNumber(String number) {
+        this.number.set(number);
     }
 
     public String getName() {
@@ -63,18 +51,6 @@ public class Seller {
         this.name.set(name);
     }
 
-    public String getAvatar() {
-        return avatar.get();
-    }
-
-    public SimpleStringProperty avatarProperty() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar.set(avatar);
-    }
-
     public String getAddress() {
         return address.get();
     }
@@ -87,15 +63,39 @@ public class Seller {
         this.address.set(address);
     }
 
+    public String getPhone() {
+        return phone.get();
+    }
+
+    public SimpleStringProperty phoneProperty() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone.set(phone);
+    }
+
+    public int getIntegral() {
+        return integral.get();
+    }
+
+    public SimpleIntegerProperty integralProperty() {
+        return integral;
+    }
+
+    public void setIntegral(int integral) {
+        this.integral.set(integral);
+    }
+
     @Override
     public String toString() {
-        return "Seller{" +
+        return "Member{" +
                 "id=" + id +
-                ", workId=" + workId +
-                ", password=" + password +
+                ", number=" + number +
                 ", name=" + name +
-                ", avatar=" + avatar +
                 ", address=" + address +
+                ", phone=" + phone +
+                ", integral=" + integral +
                 '}';
     }
 }
