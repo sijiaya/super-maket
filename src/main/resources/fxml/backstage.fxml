@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -16,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.121">
    <top>
       <AnchorPane prefHeight="135.0" prefWidth="1102.0" style="-fx-background-color: #41B6F4;">
          <children>
@@ -33,7 +32,7 @@
             </Label>
             <ImageView fitHeight="57.0" fitWidth="58.0" layoutX="966.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../图标/my.png" />
+                  <Image url="/img/my.png" />
                </image>
             </ImageView>
             <Button layoutX="1058.0" layoutY="42.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="86.0" text="登出" textAlignment="CENTER" wrapText="true">
@@ -43,7 +42,7 @@
             </Button>
             <ImageView fitHeight="128.0" fitWidth="142.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../图标/1a.png" />
+                  <Image url="/img/1a.png" />
                </image>
             </ImageView>
          </children>
