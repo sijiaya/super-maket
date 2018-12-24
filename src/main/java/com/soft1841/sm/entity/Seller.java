@@ -4,98 +4,82 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Seller {
-    private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleLongProperty workId = new SimpleLongProperty();
-    private final SimpleStringProperty password = new SimpleStringProperty();
-    private final SimpleStringProperty name = new SimpleStringProperty();
-    private final SimpleStringProperty avatar = new SimpleStringProperty();
-    private final SimpleStringProperty address = new SimpleStringProperty();
+private Long id;
+private Long work_id;
+private String password;
+private String name;
+private String avatar;
+private String address;
 
+    public Seller(Long id, Long work_id, String password, String name, String avatar, String address) {
+        this.id = id;
+        this.work_id = work_id;
+        this.password = password;
+        this.name = name;
+        this.avatar = avatar;
+        this.address = address;
+    }
 
     public Seller() {
     }
 
-    public long getId() {
-        return id.get();
-    }
-
-    public SimpleLongProperty idProperty() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id.set(id);
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public long getWorkId() {
-        return workId.get();
+    public Long getWork_id() {
+        return work_id;
     }
 
-    public SimpleLongProperty workIdProperty() {
-        return workId;
-    }
-
-    public void setWorkId(long workId) {
-        this.workId.set(workId);
+    public void setWork_id(Long work_id) {
+        this.work_id = work_id;
     }
 
     public String getPassword() {
-        return password.get();
-    }
-
-    public SimpleStringProperty passwordProperty() {
         return password;
     }
 
     public void setPassword(String password) {
-        this.password.set(password);
+        this.password = password;
     }
 
     public String getName() {
-        return name.get();
-    }
-
-    public SimpleStringProperty nameProperty() {
         return name;
     }
 
     public void setName(String name) {
-        this.name.set(name);
+        this.name = name;
     }
 
     public String getAvatar() {
-        return avatar.get();
-    }
-
-    public SimpleStringProperty avatarProperty() {
         return avatar;
     }
 
     public void setAvatar(String avatar) {
-        this.avatar.set(avatar);
+        this.avatar = avatar;
     }
 
     public String getAddress() {
-        return address.get();
-    }
-
-    public SimpleStringProperty addressProperty() {
         return address;
     }
 
     public void setAddress(String address) {
-        this.address.set(address);
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Seller{" +
                 "id=" + id +
-                ", workId=" + workId +
-                ", password=" + password +
-                ", name=" + name +
-                ", avatar=" + avatar +
-                ", address=" + address +
+                ", work_id=" + work_id +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

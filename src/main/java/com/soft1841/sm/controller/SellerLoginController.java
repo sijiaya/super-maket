@@ -1,29 +1,24 @@
 package com.soft1841.sm.controller;
 
-import cn.hutool.db.Entity;
-import com.soft1841.sm.dao.LoginDAO;
-import com.soft1841.sm.entity.Admin;
-import com.soft1841.sm.service.LoginService;
-import com.soft1841.sm.utils.DAOFactory;
+import com.soft1841.sm.service.SellerLoginService;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.net.URL;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
 
-public class LoginController{
+/**
+ * author By Ytker
+ */
+public class SellerLoginController {
     //登录接口方法的引用
-    private LoginService loginService = ServiceFactory.getLoginServiceInstance();
+    private SellerLoginService sellerLoginService = ServiceFactory.getSellerServiceInstance();
     private Stage primaryStage;
     @FXML
     private TextField account;
@@ -32,17 +27,16 @@ public class LoginController{
     public void setPrimaryStage(Stage primaryStage){
         this.primaryStage = primaryStage;
     }
-    public void Login() throws SQLException, IOException, InterruptedException {
+    public void Login() throws IOException, InterruptedException {
         //获取用户输入的用户名以及密码
         String use = account.getText().trim();
         String psd = password.getText().trim();
-        //返回Entity类型，使用LoginDAO中的方法查询用户输入的账号
-       boolean flag = loginService.login(use,psd);
-        //若用户输入的用户名不为空值，则执行
+        //返回布尔值类型，使用LoginService中的方法查询用户输入的账号与密码是否一致并返回一个布尔值
+       boolean flag = sellerLoginService.login(use,psd);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("信息提示");
+        //若flag返回为true，则执行下列语句
         if(flag){
-            //如果用户输入的密码与数据库查询出来的数据中的密码一致，则登录成功并跳转
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("信息提示");
                 alert.setContentText("恭喜你登陆成功，1S后您跳转到管理界面");
                 alert.show();
                 Thread.sleep(1000);
@@ -50,18 +44,17 @@ public class LoginController{
                 primaryStage.close();
                 Stage mainStage = new Stage();
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/xtsy.fxml"));
-                AnchorPane root = fxmlLoader.load();
+                BorderPane root = fxmlLoader.load();
                 Scene scene = new Scene(root);
                 mainStage.getIcons().add(new Image("/img/logo.png"));
-                mainStage.setTitle("后台管理系统");
+                mainStage.setTitle("收银员管理界面");
                 mainStage.setMaximized(true);
                 mainStage.setScene(scene);
                 mainStage.show();
             }else{
-                //如果用户输入的密码与数据库中根据用户名查询的密码不一致，则报错误
-                Alert alert = new Alert(Alert.AlertType.ERROR);
+                //若flag返回值为false，则为不存在该用户或者密码错误
                 alert.setTitle("登录失败");
-                alert.setContentText("密码错误，登录失败");
+                alert.setContentText("密码错误或用户名不存在，登录失败");
                 alert.show();
             }
     }
