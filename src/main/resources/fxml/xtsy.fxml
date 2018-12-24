@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -30,7 +31,7 @@
                   <Image url="/img/d.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="866.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="872.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/img/e.png" />
                </image>
@@ -70,7 +71,7 @@
                   <Image url="/img/l.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="929.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="938.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/img/m.png" />
                </image>
@@ -80,57 +81,22 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Label layoutX="27.0" layoutY="81.0" text="商品管理" />
-            <Label layoutX="108.0" layoutY="81.0" text="拉取商品" />
-            <Label layoutX="188.0" layoutY="81.0" text="商品销售" />
-            <Label layoutX="275.0" layoutY="81.0" text="销售单" />
-            <Label layoutX="350.0" layoutY="81.0" text="库存管理" />
-            <Label layoutX="430.0" layoutY="81.0" text="会员管理" />
-            <Label layoutX="506.0" layoutY="81.0" text="挂单" />
-            <Label layoutX="585.0" layoutY="81.0" text="取单" />
-            <Label layoutX="656.0" layoutY="81.0" text="交班" />
-            <Label layoutX="730.0" layoutY="81.0" text="设置" />
-            <Label layoutX="803.0" layoutY="81.0" text="帮助" />
-            <Label layoutX="858.0" layoutY="81.0" text="订单管理" />
-            <Label layoutX="945.0" layoutY="81.0" text="进货" />
+            <Button layoutX="2.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="商品管理" />
+            <Button layoutX="88.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="拉取管理" />
+            <Button layoutX="171.0" layoutY="76.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #88d3f8;" text="商品销售" />
+            <Button layoutX="257.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="销售单" />
+            <Button layoutX="325.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="库区管理" />
+            <Button layoutX="413.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="会员管理" />
+            <Button layoutX="512.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="挂单" />
+            <Button layoutX="574.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="取单" />
+            <Button layoutX="644.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="交班" />
+            <Button layoutX="716.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="设置" />
+            <Button layoutX="782.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="帮助" />
+            <Button layoutX="850.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="订单管理" />
+            <Button layoutX="938.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="进货" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="18.0" layoutY="217.0" prefHeight="480.0" prefWidth="1210.0" style="-fx-background-color: #e0e0de;" />
-      <Label layoutX="212.0" layoutY="173.0" text="商品条形码">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="386.0" layoutY="177.0" text="商品现价">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="555.0" layoutY="173.0" text="商品原价">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="723.0" layoutY="177.0" text="商品规格">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="907.0" layoutY="173.0" text="商品数量">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="1066.0" layoutY="173.0" text="小计（元）">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="56.0" layoutY="173.0" text="商品名称">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
       <Label layoutX="68.0" layoutY="725.0" text="数量（件)：" />
       <Button layoutX="288.0" layoutY="720.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="80.0" style="-fx-background-color: #41b6f4;" text="移除商品" textFill="#390606" />
       <Button layoutX="374.0" layoutY="722.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="84.0" style="-fx-background-color: #41b6f4;" text="网上订单" />
@@ -157,5 +123,40 @@
       </Button>
       <Label layoutX="932.0" layoutY="808.0" text="（空格键）" />
       <Label layoutX="1102.0" layoutY="813.0" text="0.00元" />
+      <Button layoutX="68.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品名称">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品条形码">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="407.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品现价">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="572.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品原价">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="729.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品规格">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="890.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品数量">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="1064.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="小计（元）">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
