@@ -11,7 +11,7 @@ import java.util.Scanner;
 import static org.junit.Assert.*;
 
 public class LoginDAOTest {
-    private LoginDAO loginDAO = DAOFactory.getLoginDAOInstance();
+    private SellerDAO loginDAO = DAOFactory.getSellerDAOInstance();
     @Test
     public void selectAdmin() throws SQLException {
         Scanner scanner = new Scanner(System.in);

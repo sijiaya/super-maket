@@ -32,7 +32,7 @@
             </font>
          </Label>
          <ImageView fitHeight="45" fitWidth="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
-            <Image url="/img/my.png"/>
+            <Image url="/img/1a.png"/>
          </ImageView>
          <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" />
       </AnchorPane>
@@ -69,7 +69,6 @@
                      <VBox minHeight="130" spacing="10"  >
                         <Button text="收银小票" onAction="#listCashier_check"/>
                         <Button text="小票明细" onAction="#listRegister_detail"/>
-
                      </VBox>
                   </TitledPane>
                </panes>

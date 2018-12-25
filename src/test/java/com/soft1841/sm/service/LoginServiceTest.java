@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LoginServiceTest {
-    private LoginService loginService = ServiceFactory.getLoginServiceInstance();
+    private SellerLoginService loginService = ServiceFactory.getSellerServiceInstance();
     @Test
     public void login() {
         boolean flag = loginService.login("admin","soft1841");
