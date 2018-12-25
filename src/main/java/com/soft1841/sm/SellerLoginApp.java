@@ -17,7 +17,7 @@ public class SellerLoginApp extends Application {
         //将当前主舞台传递给控制器对象
         controller.setPrimaryStage(primaryStage);
         primaryStage.setTitle("收银员登录");
-        primaryStage.setScene(new Scene(root, 500, 700));
+        primaryStage.setScene(new Scene(root, 560, 700));
         primaryStage.show();
     }
 

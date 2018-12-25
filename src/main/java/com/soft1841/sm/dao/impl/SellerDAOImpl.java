@@ -45,7 +45,7 @@ public class SellerDAOImpl implements SellerDAO {
     public Seller getUserByName(String work_id) throws SQLException {
         //定义Entity返回类型，查询sql语句
         Entity entity = Db.use().queryOne("select * from t_seller where work_id = ?" ,work_id);
-        //使用converSeller方法将entity型转化为Seller
+        //使用convertSeller方法将entity型转化为Seller
         return convertSeller(entity);
     }
     private Seller convertSeller(Entity entity){

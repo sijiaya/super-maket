@@ -8,7 +8,7 @@ import com.soft1841.sm.entity.Detail;
 import java.sql.SQLException;
 import java.util.List;
 
-public class DetailDDAOImpl implements DetailDAO {
+public class DetailDAOImpl implements DetailDAO {
 
     @Override
     public Long insertDetail(Detail detail) throws SQLException {
