@@ -1,12 +1,8 @@
-<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="466.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.Main">
+<AnchorPane prefHeight="466.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController">
     <children>
         <Label layoutX="-1.0" layoutY="1.0" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #106ce4;" text="管理员登陆" textFill="#eef6ff">
             <font>

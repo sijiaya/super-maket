@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 收银员的增删改查
+ * author By Ytker
  */
 public interface SellerDAO {
 
@@ -49,4 +50,13 @@ public interface SellerDAO {
      * @throws SQLException
      */
     int updateSeller(Long workId) throws SQLException;
+
+    /**
+     * 定义查询类型，获取数据库中的用户名
+     * 登录方面
+     * @param work_id
+     * @return
+     * @throws SQLException
+     */
+    Seller getUserByName(String work_id) throws SQLException;
 }

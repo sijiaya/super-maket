@@ -11,13 +11,15 @@ import javafx.scene.layout.StackPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class MainController implements Initializable {
     @FXML
-    private StackPane  mainContainer;
+    private StackPane mainContainer;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
     //显示默认主页数据
     public void listDefault() throws Exception {
         switchView("default.fxml");
@@ -32,18 +34,22 @@ public class Controller implements Initializable {
     public void listCommodity() throws Exception {
         switchView("commodity.fxml");
     }
+
     //显示收银员数据
     public void listCashier() throws Exception {
         switchView("cashier.fxml");
     }
+
     //显示会员数据
     public void listMember() throws Exception {
         switchView("member.fxml");
     }
+
     //显示小票数据
     public void listCashier_check() throws Exception {
         switchView("cashier_check.fxml");
     }
+
     //显示收银明细
     public void listRegister_detail() throws Exception {
         switchView("register_detail.fxml");
@@ -60,4 +66,3 @@ public class Controller implements Initializable {
         mainContainer.getChildren().add(anchorPane);
     }
 }
-
