@@ -48,6 +48,7 @@ public class AdminLoginController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
             BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
+            scene.getStylesheets().add("/css/style.css");
             mainStage.getIcons().add(new Image("/img/logo.png"));
             mainStage.setTitle("管理员界面");
             mainStage.setMaximized(true);

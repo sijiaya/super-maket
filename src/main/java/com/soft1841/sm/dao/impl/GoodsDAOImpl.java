@@ -41,4 +41,9 @@ public  class GoodsDAOImpl implements GoodsDAO {
     public List<Entity> selectGoodLike(String keywords) throws SQLException {
         return Db.use().findLike("t_goods","name",keywords, Condition.LikeType.Contains);
     }
+
+    @Override
+    public void updateGoods(Goods goods) {
+
+    }
 }

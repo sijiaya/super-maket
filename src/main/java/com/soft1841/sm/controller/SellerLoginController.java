@@ -53,6 +53,7 @@ public class SellerLoginController {
                 AnchorPane root = fxmlLoader.load();
                 Scene scene = new Scene(root);
                 mainStage.getIcons().add(new Image("/img/logo.png"));
+                scene.getStylesheets().add("/css/style.css");
                 mainStage.setTitle("收银员管理界面");
                 mainStage.setScene(scene);
                 mainStage.show();
