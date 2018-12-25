@@ -54,7 +54,6 @@ public class SellerLoginController {
                 Scene scene = new Scene(root);
                 mainStage.getIcons().add(new Image("/img/logo.png"));
                 mainStage.setTitle("收银员管理界面");
-                mainStage.setMaximized(true);
                 mainStage.setScene(scene);
                 mainStage.show();
             } else {
