@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
@@ -6,7 +7,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,74 +19,86 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.MainController"
             prefHeight="400.0" prefWidth="600.0">
-   <top>
-      <AnchorPane prefHeight="80.0" >
-         <!--//默认显示主页数据的label-->
-         <Label text="天庭神界超市管理系统" onMouseClicked="#listDefault" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
-            <!--字体特效-->
-            <effect>
-               <Reflection bottomOpacity="0.5" fraction="0.5" topOffset="-5.0"/>
-            </effect>
-            <font>
-               <Font name="System Bold" size="30.0"/>
-            </font>
-         </Label>
-         <ImageView fitHeight="45" fitWidth="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
-            <Image url="/img/1a.png"/>
-         </ImageView>
-         <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" />
-      </AnchorPane>
-   </top>
-   <center>
-      <!--分割面板-->
-      <SplitPane>
-         <!--左侧的导航菜单-->
-         <AnchorPane minWidth="200" maxWidth="200" >
-            <!--风琴面板实现不知道啥效果，打完了就知道了-->
-            <Accordion AnchorPane.leftAnchor="0.0"
-                       AnchorPane.topAnchor="0.0"
-                       AnchorPane.rightAnchor="0.0">
-               <panes>
-                  <!--标题面板嵌入VBox，实现一二级目录-->
-                  <TitledPane alignment="TOP_LEFT" text="商品信息管理">
-                     <VBox minHeight="100" spacing="10" >
-                        <Button text="商品类别"  onAction="#listCategory"/>
-                        <Button text="商品" onAction="#listCommodity"/>
-                     </VBox>
-                  </TitledPane>
-                  <TitledPane alignment="TOP_LEFT" text="收银员管理">
-                     <VBox minHeight="100" spacing="10" >
-                        <!--点击该按钮。右侧切换图书数据-->
-                        <Button text="收银员信息" onAction="#listCashier" />
-                     </VBox>
-                  </TitledPane>
-                  <TitledPane alignment="TOP_LEFT" text="会员管理">
-                     <VBox minHeight="130" spacing="10"  >
-                        <Button text="会员信息" onAction="#listMember"/>
-                     </VBox>
-                  </TitledPane>
-                  <TitledPane alignment="TOP_LEFT" text="收银小票管理">
-                     <VBox minHeight="130" spacing="10"  >
-                        <Button text="收银小票" onAction="#listCashier_check"/>
-                        <Button text="小票明细" onAction="#listRegister_detail"/>
-                     </VBox>
-                  </TitledPane>
-               </panes>
-            </Accordion>
-         </AnchorPane>
-         <!--fittowidth是自适应所在区域-->
-         <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
-            <!--右侧的主题内容部分，采用StackPane实现卡片切换效果-->
-            <StackPane  minWidth="1060">
-               <!--加载外部的fxml文件，显示默认的主题内容-->
-               <padding>
-                  <Insets top="10" left="30" bottom="5" right="10"/>
-               </padding>
-            </StackPane>
-         </ScrollPane>
-         <padding>
-            <Insets top="10"/>
-         </padding>
-      </SplitPane>
-   </center>
+    <top>
+        <AnchorPane prefHeight="80.0" styleClass="green-theme">
+            <!--//默认显示主页数据的label-->
+            <Label text="天庭神界超市管理系统"  AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+                <!--字体特效-->
+                <effect>
+                    <Reflection bottomOpacity="0.5" fraction="0.5" topOffset="-5.0"/>
+                </effect>
+                <font>
+                    <Font name="System Bold" size="30.0"/>
+                </font>
+            </Label>
+            <ImageView fitHeight="45" fitWidth="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
+                <Image url="/img/my.png"/>
+            </ImageView>
+            <Button text="退出系统" onAction="#close" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" styleClass="btn-radius-normal,warm-theme"/>
+        </AnchorPane>
+    </top>
+    <center>
+        <!--分割面板-->
+        <SplitPane>
+            <!--左侧的导航菜单-->
+            <AnchorPane minWidth="200" maxWidth="200" styleClass="dark-gray-theme">
+                <!--风琴面板-->
+                <Accordion AnchorPane.leftAnchor="0.0"
+                           AnchorPane.topAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0">
+                    <panes>
+                        <!--标题面板嵌入VBox，实现一二级目录-->
+                        <TitledPane alignment="TOP_LEFT" text="类别管理">
+                            <VBox minHeight="100" spacing="10" styleClass="dark-theme">
+                                <Button text="类别查看" styleClass="green-theme,btn-basic,btn-radius-normal" onAction="#listType"/>
+                                <Button text="分类统计" styleClass="green-theme,btn-basic,btn-radius-normal"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="商品管理">
+                            <VBox minHeight="100" spacing="10"  styleClass="dark-theme">
+                                <!--点击该按钮。右侧切换图书数据-->
+                                <Button text="商品信息" onAction="#listCommodity" styleClass="btn-second"/>
+                                <Button text="统计分析" styleClass="btn-second"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="用户管理">
+                            <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
+                                <Button text="管理员信息" styleClass="btn-second"/>
+                                <Button text="读者信息" styleClass="btn-second"/>
+                                <Button text="统计分析" styleClass="btn-second"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="借阅管理">
+                            <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
+                                <Button text="借阅查询" styleClass="btn-second"/>
+                                <Button text="统计分析" styleClass="btn-second"/>
+                            </VBox>
+                        </TitledPane>
+                        <TitledPane alignment="TOP_LEFT" text="系统维护">
+                            <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
+                                <Button text="系统初始化" styleClass="btn-second"/>
+                                <Button text="数据备份" styleClass="btn-second"/>
+                                <Button text="主题设置" styleClass="btn-second"/>
+                            </VBox>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </AnchorPane>
+            <!--fittowidth是自适应所在区域-->
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED" styleClass="default-theme">
+                <!--右侧的主题内容部分，采用StackPane实现卡片切换效果-->
+                <StackPane fx:id="MainController" minWidth="1060">
+                    <!--加载外部的fxml文件，显示默认的主题内容-->
+                    <fx:include source="default.fxml"/>
+                    <padding>
+                        <Insets top="10" left="30" bottom="5" right="10"/>
+                    </padding>
+                </StackPane>
+            </ScrollPane>
+            <padding>
+                <Insets top="10"/>
+            </padding>
+        </SplitPane>
+    </center>
 </BorderPane>

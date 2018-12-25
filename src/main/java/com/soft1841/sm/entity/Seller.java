@@ -1,7 +1,7 @@
 package com.soft1841.sm.entity;
 
+
 import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleStringProperty;
 
 public class Seller {
 private Long id;

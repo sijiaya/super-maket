@@ -2,13 +2,14 @@ package com.soft1841.sm.dao.impl;
 
 import cn.hutool.db.Db;
 import cn.hutool.db.Entity;
+import cn.hutool.db.sql.Condition;
 import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.entity.Goods;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class GoodsDAOImpl implements GoodsDAO {
+public  class GoodsDAOImpl implements GoodsDAO {
     @Override
     public List<Entity> selectGoods() throws SQLException {
         return Db.use().query("SELECT * FROM t_goods" );
@@ -25,5 +26,19 @@ public class GoodsDAOImpl implements GoodsDAO {
                         .set("description", goods.getDescription())
                         .set("picture",goods.getPicture())
         );
+    }
+
+    @Override
+    public List<Entity> selectGoodsByTypeId(int typeId) throws SQLException {
+        return Db.use().query("SELECT * FROM t_goods WHERE type_id = ? ",typeId);
+    }
+
+
+
+
+
+    @Override
+    public List<Entity> selectGoodLike(String keywords) throws SQLException {
+        return Db.use().findLike("t_goods","name",keywords, Condition.LikeType.Contains);
     }
 }

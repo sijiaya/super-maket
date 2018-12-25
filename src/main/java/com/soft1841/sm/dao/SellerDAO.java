@@ -45,11 +45,11 @@ public interface SellerDAO {
 
     /**
      * 根据工号更新员工数据
-     * @param workId
+     * @param seller
      * @return
      * @throws SQLException
      */
-    int updateSeller(Long workId) throws SQLException;
+    int updateSeller(Seller seller) throws SQLException;
 
     /**
      * 定义查询类型，获取数据库中的用户名

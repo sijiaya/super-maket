@@ -1,4 +1,4 @@
 package com.soft1841.sm.controller;
 
-public class CategoryController {
+public class Controller {
 }

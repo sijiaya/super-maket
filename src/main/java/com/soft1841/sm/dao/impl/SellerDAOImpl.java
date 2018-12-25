@@ -31,8 +31,12 @@ public class SellerDAOImpl implements SellerDAO {
     }
 
     @Override
-    public int updateSeller(Long workId) throws SQLException {
-        return 0;
+    public int updateSeller(Seller seller) throws SQLException {
+        return Db.use().update(
+                Entity.create().set("password",seller.getPassword())
+                .set("name",seller.getName()),
+                Entity.create("t_seller").set("id",seller.getId())
+        );
     }
 
     /**

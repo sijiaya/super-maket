@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Commodity">
+<AnchorPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CommodityController">
    <children>
       <Button layoutX="44.0" layoutY="63.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="146.0" text="添加商品信息">
          <font>

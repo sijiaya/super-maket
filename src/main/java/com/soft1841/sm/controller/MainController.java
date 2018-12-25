@@ -7,27 +7,41 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-
+import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
     @FXML
+
     private StackPane mainContainer;
+
+    @FXML
+    private StackPane MainController;
+    private Stage primaryStage;
+    public void setPrimaryStage(Stage primaryStage){
+        this.primaryStage = primaryStage;
+    }
+    public void close(){
+        primaryStage.close();
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
+
     //显示默认主页数据
+
     public void listDefault() throws Exception {
         switchView("default.fxml");
     }
 
     //显示商品类别数据
-    public void listCategory() throws Exception {
-        switchView("category.fxml");
+    public void listType() throws Exception {
+        switchView("type.fxml");
     }
 
     //显示商品数据
@@ -66,3 +80,4 @@ public class MainController implements Initializable {
         mainContainer.getChildren().add(anchorPane);
     }
 }
+
