@@ -24,4 +24,17 @@ public class GoodsDAOTest {
         goods.setPicture("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1545470537&di=cbd7f8af34d92646f3ec820d64fa5423&src=http://img002.hc360.cn/m6/M0E/0A/EF/wKhQoVWLUkmESjdNAAAAAPoQGGo387.jpg");
         System.out.println(goodsDAO.insertGoods(goods));
     }
+    @Test
+    public void selectGoodsByTypeId()throws SQLException{
+        List<Entity> goodsList = goodsDAO.selectGoodsByTypeId(1);
+        goodsList.forEach(entity -> System.out.println(entity.getStr("name")));
+
+    }
+    @Test
+    public void selectGoossLike() throws SQLException {
+        List<Entity> goodsList = goodsDAO.selectGoodLike("苹");
+        goodsList.forEach(entity -> System.out.println(entity.getStr("name")));
+    }
+
+
 }
