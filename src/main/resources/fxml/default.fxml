@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="48.0" layoutY="36.0" prefHeight="46.0" prefWidth="257.0" text="店名：天庭神界连锁超市">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="91.0" prefHeight="46.0" prefWidth="241.0" text="营业时间：24小时营业">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

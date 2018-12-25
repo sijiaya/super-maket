@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -15,136 +14,80 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.effect.Reflection?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.sm.controller.Controller"
+            prefHeight="400.0" prefWidth="600.0">
    <top>
-      <AnchorPane prefHeight="135.0" prefWidth="1102.0" style="-fx-background-color: #41B6F4;">
-         <children>
-            <Label layoutX="196.0" layoutY="32.0" prefHeight="64.0" prefWidth="604.0" text="      TTSJ    后     台     管     理" textFill="#656565">
-               <BorderPane.margin>
-                  <Insets left="20.0" top="10.0" />
-               </BorderPane.margin>
-               <font>
-                  <Font size="34.0" />
-               </font>
-               <effect>
-                  <SepiaTone />
-               </effect>
-            </Label>
-            <ImageView fitHeight="57.0" fitWidth="58.0" layoutX="966.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../图标/my.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="1058.0" layoutY="42.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="86.0" text="登出" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="128.0" fitWidth="142.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../图标/1a.png" />
-               </image>
-            </ImageView>
-         </children>
+      <AnchorPane prefHeight="80.0" >
+         <!--//默认显示主页数据的label-->
+         <Label text="天庭神界超市管理系统" onMouseClicked="#listDefault" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+            <!--字体特效-->
+            <effect>
+               <Reflection bottomOpacity="0.5" fraction="0.5" topOffset="-5.0"/>
+            </effect>
+            <font>
+               <Font name="System Bold" size="30.0"/>
+            </font>
+         </Label>
+         <ImageView fitHeight="45" fitWidth="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120">
+            <Image url="/img/my.png"/>
+         </ImageView>
+         <Button text="退出系统" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" />
       </AnchorPane>
    </top>
    <center>
-      <SplitPane dividerPositions="0.2657580919931857" prefHeight="574.0" prefWidth="1176.0" BorderPane.alignment="CENTER">
-         <items>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <Accordion layoutX="-2.0" layoutY="-5.0" prefHeight="700.0" prefWidth="311.0">
-                    <panes>
-                        <TitledPane animated="false" text="数据统计">
-                           <content>
-                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" text="  收  银  小  票" textAlignment="CENTER">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                    <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" text="收  银  明  细" textAlignment="CENTER">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </VBox>
-                           </content>
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </TitledPane>
-                        <TitledPane animated="false" text="商品信息管理">
-                           <content>
-                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" text=" 商  品  类  别 " textAlignment="CENTER">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                    <Button mnemonicParsing="false" text="     商      品    " textAlignment="CENTER">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </VBox>
-                           </content>
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </TitledPane>
-                      <TitledPane animated="false" text="会员信息管理">
-                           <content>
-                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="174.0" text="会员管理">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </VBox>
-                           </content>
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                      </TitledPane>
-                      <TitledPane animated="false" prefHeight="503.0" prefWidth="290.0" text="收银员信息管理">
-                           <content>
-                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="167.0" text="收银员管理">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                    <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="168.0" text="收银员工作">
-                                       <font>
-                                          <Font size="22.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </VBox>
-                           </content>
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                      </TitledPane>
-                    </panes>
-                  </Accordion>
-               </children>
-            </AnchorPane>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0">
-               <content>
-                  <StackPane prefHeight="694.0" prefWidth="861.0" />
-               </content>
-            </ScrollPane>
-         </items>
+      <!--分割面板-->
+      <SplitPane>
+         <!--左侧的导航菜单-->
+         <AnchorPane minWidth="200" maxWidth="200" >
+            <!--风琴面板实现不知道啥效果，打完了就知道了-->
+            <Accordion AnchorPane.leftAnchor="0.0"
+                       AnchorPane.topAnchor="0.0"
+                       AnchorPane.rightAnchor="0.0">
+               <panes>
+                  <!--标题面板嵌入VBox，实现一二级目录-->
+                  <TitledPane alignment="TOP_LEFT" text="商品信息管理">
+                     <VBox minHeight="100" spacing="10" >
+                        <Button text="商品类别"  onAction="#listCategory"/>
+                        <Button text="商品" onAction="#listCommodity"/>
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane alignment="TOP_LEFT" text="收银员管理">
+                     <VBox minHeight="100" spacing="10" >
+                        <!--点击该按钮。右侧切换图书数据-->
+                        <Button text="收银员信息" onAction="#listCashier" />
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane alignment="TOP_LEFT" text="会员管理">
+                     <VBox minHeight="130" spacing="10"  >
+                        <Button text="会员信息" onAction="#listMember"/>
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane alignment="TOP_LEFT" text="收银小票管理">
+                     <VBox minHeight="130" spacing="10"  >
+                        <Button text="收银小票" onAction="#listCashier_check"/>
+                        <Button text="小票明细" onAction="#listRegister_detail"/>
+
+                     </VBox>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+         </AnchorPane>
+         <!--fittowidth是自适应所在区域-->
+         <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+            <!--右侧的主题内容部分，采用StackPane实现卡片切换效果-->
+            <StackPane  minWidth="1060">
+               <!--加载外部的fxml文件，显示默认的主题内容-->
+               <padding>
+                  <Insets top="10" left="30" bottom="5" right="10"/>
+               </padding>
+            </StackPane>
+         </ScrollPane>
+         <padding>
+            <Insets top="10"/>
+         </padding>
       </SplitPane>
    </center>
 </BorderPane>
