@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * author By Ytker
  */
 public class SellerLoginServiceImpl implements SellerLoginService {
-    //获取SellDAO接口方法
+    //获取SellerDAO接口方法
     private SellerDAO sellerDAO = DAOFactory.getSellerDAOInstance();
     @Override
     public boolean login(String work_id, String password) {

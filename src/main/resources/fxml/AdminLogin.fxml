@@ -10,13 +10,13 @@
             </font>
         </Label>
         <Label layoutX="-3.0" layoutY="57.0" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #45cef4;" textFill="#45cef4" />
-        <TextField layoutX="196.0" layoutY="174.0" />
-        <PasswordField layoutX="198.0" layoutY="251.0" />
+        <TextField layoutX="196.0" layoutY="174.0" fx:id="account" />
+        <PasswordField layoutX="198.0" layoutY="251.0"  fx:id="password"/>
         <Label layoutX="133.0" layoutY="179.0" text="账号" />
         <Label layoutX="140.0" layoutY="256.0" text="密码" />
         <CheckBox layoutX="182.0" layoutY="327.0" mnemonicParsing="false" text="记住密码" />
         <Label layoutX="344.0" layoutY="328.0" text="忘记密码？" />
-        <Button layoutX="246.0" layoutY="378.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #45cef4;" text="登 陆">
+        <Button layoutX="246.0" layoutY="378.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #45cef4;" text="登 录" onAction="#Login">
             <font>
                 <Font size="20.0" />
             </font>
