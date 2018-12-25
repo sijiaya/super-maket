@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
@@ -22,7 +21,7 @@
     <top>
         <AnchorPane prefHeight="80.0" styleClass="green-theme">
             <!--//默认显示主页数据的label-->
-            <Label text="天庭神界超市管理系统"  AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+            <Label text="天庭神界超市管理系统" onMouseClicked="#listDefault" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
                 <!--字体特效-->
                 <effect>
                     <Reflection bottomOpacity="0.5" fraction="0.5" topOffset="-5.0"/>
@@ -57,14 +56,14 @@
                         <TitledPane alignment="TOP_LEFT" text="商品管理">
                             <VBox minHeight="100" spacing="10"  styleClass="dark-theme">
                                 <!--点击该按钮。右侧切换图书数据-->
-                                <Button text="商品信息" onAction="#listCommodity" styleClass="btn-second"/>
+                                <Button text="商品信息" onAction="#listGoods" styleClass="btn-second"/>
                                 <Button text="统计分析" styleClass="btn-second"/>
                             </VBox>
                         </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="用户管理">
                             <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
-                                <Button text="管理员信息" styleClass="btn-second"/>
-                                <Button text="读者信息" styleClass="btn-second"/>
+                                <Button text="管理员信息" styleClass="btn-second" onAction="#listUser"/>
+                                <Button text="读者信息" styleClass="btn-second" onAction="#listReader"/>
                                 <Button text="统计分析" styleClass="btn-second"/>
                             </VBox>
                         </TitledPane>

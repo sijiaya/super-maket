@@ -1,5 +1,4 @@
 package com.soft1841.sm;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
