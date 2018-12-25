@@ -4,7 +4,10 @@ package com.soft1841.sm.controller;
  * @author sijia
  */
 
+import com.soft1841.sm.dao.AdminDAO;
+import com.soft1841.sm.entity.Admin;
 import com.soft1841.sm.service.AdminLoginService;
+import com.soft1841.sm.utils.DAOFactory;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +20,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AdminLoginController {
     //登录接口方法的引用
@@ -31,32 +35,36 @@ public class AdminLoginController {
     public void setPrimaryStage(Stage primaryStage){this.primaryStage = primaryStage;}
     public void Login() throws IOException, InterruptedException{
         //获取用户输入的用户名和密码
-        int job_id = Integer.parseInt(account.getText().trim());
+        String use = account.getText().trim();
         String psd = password.getText().trim();
         //返回布尔类型，使用adminLoginService方法查询用户输入的账号密码是否一致，并返回一个布尔值
-         boolean flag = adminLoginService.login(job_id,psd);
-         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-         alert.setTitle("信息提示");
-         //当flag为true则执行下列语句
-        if (flag){
-            alert.setContentText("恭喜你登录成功,1秒后跳转到管理界面");
-            alert.show();
-            Thread.sleep(1000);
-            alert.close();
-            primaryStage.close();
-            Stage mainStage = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
-            BorderPane root = fxmlLoader.load();
-            Scene scene = new Scene(root);
-            mainStage.getIcons().add(new Image("/img/logo.png"));
-            mainStage.setTitle("管理员界面");
-            mainStage.setMaximized(true);
-            mainStage.setScene(scene);
-            mainStage.show();
-        }else {
-            alert.setTitle("登录失败");
-            alert.setContentText("密码错误或用户不存在，登录失败");
-            alert.show();
+        boolean flag = adminLoginService.login(Integer.valueOf(use), psd);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("信息提示");
+            //当flag为true则执行下列语句
+            if (flag) {
+                alert.setContentText("恭喜你登录成功,1秒后跳转到管理界面");
+                alert.show();
+                Thread.sleep(1000);
+                alert.close();
+                primaryStage.close();
+                Stage mainStage = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
+                BorderPane root = fxmlLoader.load();
+                Scene scene = new Scene(root);
+                scene.getStylesheets().add("/css/style.css");
+                MainController controller = fxmlLoader.getController();
+                //将当前主舞台传递给控制器对象
+                controller.setPrimaryStage(primaryStage);
+                mainStage.getIcons().add(new Image("/img/logo.png"));
+                mainStage.setTitle("管理员界面");
+                mainStage.setMaximized(true);
+                mainStage.setScene(scene);
+                mainStage.show();
+            } else {
+                alert.setTitle("登录失败");
+                alert.setContentText("密码错误或用户不存在，登录失败");
+                alert.show();
+            }
         }
     }
-}

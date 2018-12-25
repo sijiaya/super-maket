@@ -3,6 +3,8 @@ import com.soft1841.sm.dao.SellerDAO;
 import com.soft1841.sm.entity.Seller;
 import com.soft1841.sm.service.SellerLoginService;
 import com.soft1841.sm.utils.DAOFactory;
+import javafx.scene.control.Alert;
+
 import java.sql.SQLException;
 
 /**
@@ -18,6 +20,10 @@ public class SellerLoginServiceImpl implements SellerLoginService {
         try {
             //调用SellDAO方法中的查询方法，查询此ID
             seller = sellerDAO.getUserByName(work_id);
+        } catch (NullPointerException e) {
+            Alert alert =new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("错误");
+            alert.setContentText("用户名不存在");
         } catch (SQLException e) {
             e.printStackTrace();
         }
