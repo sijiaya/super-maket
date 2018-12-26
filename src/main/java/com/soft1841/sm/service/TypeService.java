@@ -4,6 +4,7 @@ import com.soft1841.sm.entity.Type;
 import java.util.List;
 
 /**
+ * 商品类别业务逻辑接口
  * @author 郭瑞昌
  * 2018.12.25
  * 22.37
@@ -26,4 +27,11 @@ public interface TypeService {
      * @return Book
      */
     Type getType(long id);
+
+    /**
+     * 添加类别
+     * @param type
+     * @return
+     */
+    Long addType(Type type);
 }

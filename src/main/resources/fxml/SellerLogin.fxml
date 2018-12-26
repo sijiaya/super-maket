@@ -8,11 +8,6 @@
             fx:controller="com.soft1841.sm.controller.SellerLoginController">
 
    <children>
-      <ImageView fitHeight="730.0" fitWidth="572.0" layoutX="1.0" layoutY="6.0" pickOnBounds="true">
-         <image>
-            <Image url="/img/logo.PNG" />
-         </image>
-      </ImageView>
       <Label layoutX="83.0" layoutY="265.0" prefHeight="25.0" prefWidth="47.0" text="账号" textFill="#31555b">
          <font>
             <Font size="20.0" />

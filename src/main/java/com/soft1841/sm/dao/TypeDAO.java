@@ -1,7 +1,6 @@
 package com.soft1841.sm.dao;
 
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 
 import java.sql.SQLException;
@@ -20,13 +19,6 @@ public interface TypeDAO {
     Long insertType(Type type) throws SQLException;
 
 
-    /**
-     * 根据id删除类别
-     * @param id
-     * @return
-     * @throws SQLException
-     */
-    int deleteTypeById(Long id) throws SQLException;
 
     /**
      * 查询所有类别
@@ -47,7 +39,14 @@ public interface TypeDAO {
      *更新类别
      * @param type
      * @return
-     * @throws SQLException
      */
     int updateType(Type type) throws SQLException;
+
+    /**
+     * 根据id删除类别
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    int deleteTypeById(Long id)throws SQLException;
 }
