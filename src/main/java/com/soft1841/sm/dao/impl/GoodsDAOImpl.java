@@ -22,7 +22,7 @@ public  class GoodsDAOImpl implements GoodsDAO {
                         .set("type_id", goods.getTypeId())
                         .set("name", goods.getName())
                         .set("price", goods.getPrice())
-                        .set("vipPrice", goods.getVipPrice())
+                        .set("vip", goods.getVip())
                         .set("description", goods.getDescription())
                         .set("picture",goods.getPicture())
         );

@@ -25,11 +25,12 @@ public interface GoodsDAO {
     Long insertGoods(Goods goods) throws SQLException;
 
     /**
-     * 根据商品类别查询商品
+     *
      * @param typeId
      * @return
      * @throws SQLException
      */
+
     List<Entity> selectGoodsByTypeId(int typeId) throws SQLException;
 
     /**
