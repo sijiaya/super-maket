@@ -21,10 +21,15 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class GoodsController implements Initializable {
+    //布局文件中的表格视图对象，显示数据库中读取的所有商品信息
     @FXML
     private TableView<Goods> goodsTable;
+
+    //布局文件中的下拉框组件对象，用来显示数据库中读取的所有商品类别
     @FXML
     private ComboBox<Type> typeComboBox;
+
+    //布局文件中输入文本框对象，用来输入搜索关键词
     @FXML
     private TextField keywordsField;
     //图书模型数据集合，可以实时相应数据变化，无需刷新

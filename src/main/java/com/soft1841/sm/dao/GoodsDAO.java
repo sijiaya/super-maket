@@ -43,5 +43,10 @@ public interface GoodsDAO {
      */
     List<Entity> selectGoodLike(String keywords) throws SQLException;
 
-    void updateGoods(Goods goods);
+    /**
+     * 更新商品信息
+     * @param goods
+     * @return
+     */
+    void updateGoods(Goods goods) ;
 }

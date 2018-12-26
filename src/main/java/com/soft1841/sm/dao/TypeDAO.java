@@ -3,7 +3,6 @@ package com.soft1841.sm.dao;
 
 import com.soft1841.sm.entity.Type;
 
-import javax.swing.text.html.parser.Entity;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -20,20 +19,13 @@ public interface TypeDAO {
     Long insertType(Type type) throws SQLException;
 
 
-    /**
-     * 根据id删除类别
-     * @param id
-     * @return
-     * @throws SQLException
-     */
-    int deleteTypeById(Long id) throws SQLException;
 
     /**
      * 查询所有类别
      * @return
      * @throws SQLException
      */
-    List<Entity> selectAllTypes() throws SQLException;
+    List<Type> selectAllTypes() throws SQLException;
 
     /**
      * 根据id查询类别信息
@@ -47,7 +39,14 @@ public interface TypeDAO {
      *更新类别
      * @param type
      * @return
-     * @throws SQLException
      */
     int updateType(Type type) throws SQLException;
+
+    /**
+     * 根据id删除类别
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    int deleteTypeById(Long id)throws SQLException;
 }

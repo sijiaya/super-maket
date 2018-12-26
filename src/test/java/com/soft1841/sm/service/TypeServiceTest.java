@@ -4,6 +4,8 @@ import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.utils.ServiceFactory;
 import org.junit.Test;
 
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.xml.ws.soap.Addressing;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -21,5 +23,12 @@ public class TypeServiceTest {
     @Test
     public void deleteType() {
         typeService.deleteType(10);
+    }
+
+    @Test
+    public void addType(){
+        Type type = new Type();
+        type.setName("测试新类别");
+        typeService.addType(type);
     }
 }

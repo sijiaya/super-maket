@@ -18,13 +18,8 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public List<Type> selectAllType() {
         List<Type> typeList = new ArrayList<>();
-        try {
-            //调用底层TypeDAO的查询类别方法，得到一个typeList
+        //调用底层TypeDAO的查询类别方法，得到一个typeList
 
-        } catch (SQLException e) {
-            //友好处理其出现的异常
-            System.err.println("查询类别出现错误!");
-        }
         return typeList;
     }
 
@@ -44,8 +39,25 @@ public class TypeServiceImpl implements TypeService {
         try {
             type = typeDAO.getTypeById(id);
         } catch (SQLException e) {
-            System.err.println("查询单个图书信息出现异常");
+            System.err.println("查询单个类别信息出现异常");
         }
         return type;
+    }
+
+    /**
+     * 添加类别
+     *
+     * @param type
+     * @return
+     */
+    @Override
+    public Long addType(Type type) {
+        long result = 0;
+        try {
+            result = typeDAO.insertType(type);
+        }catch (SQLException e){
+            System.err.println("新增商品类别出现异常");
+        }
+        return result;
     }
 }

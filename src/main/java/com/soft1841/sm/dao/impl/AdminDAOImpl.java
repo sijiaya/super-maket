@@ -22,7 +22,7 @@ public class AdminDAOImpl implements AdminDAO {
         return 0;
     }
 
-
+    //查询所有管理者
     @Override
     public List<Entity> selectAllAdmin() throws SQLException {
         return null;
@@ -56,8 +56,10 @@ public class AdminDAOImpl implements AdminDAO {
     }
     private Admin convertAdmin(Entity entity){
         //给Admin定义数据库中的列名
-        Admin admin = new Admin(entity.getInt("id"),entity.getInt("job_id"),entity.getStr("password"),
-                entity.getStr("name"),entity.getStr("avatar"),entity.getStr("address"));
+        Admin admin = new Admin(entity.getInt("id"),
+                entity.getInt("job_id"),entity.getStr("password"),
+                entity.getStr("name"),entity.getStr("avatar"),
+                entity.getStr("address"));
         return admin;
     }
 }

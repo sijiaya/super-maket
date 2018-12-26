@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class SellerLoginApp extends Application {
 
     @Override
@@ -17,7 +19,7 @@ public class SellerLoginApp extends Application {
         //将当前主舞台传递给控制器对象
         controller.setPrimaryStage(primaryStage);
         primaryStage.setTitle("收银员登录");
-        Scene scene = new Scene(root,500,700);
+        Scene scene = new Scene(root,565,730);
         scene.getStylesheets().add("/css/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();
