@@ -16,6 +16,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import javax.swing.text.html.parser.Entity;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +39,7 @@ public class TypeController implements Initializable {
     private TypeService typeService = ServiceFactory.getTypeServiceInstance();
 
     //定义实体集合存放数据库查询结果
-    private List<Type> typeList;
+    private List<Entity> typeList;
     private TableColumn<Type, Type> delCol = new TableColumn<>("操作");
 
     @Override
@@ -114,8 +116,8 @@ public class TypeController implements Initializable {
     public void addType() {
     }
     //根据showTypeData给用户一个展现的方法
-    private void showTypeData(List<Type> typeList) {
-        typeData.addAll(typeList);
+    private void showTypeData(List<Entity> typeList) {
+        typeData.addAll((Type) typeList);
         typeTable.setItems(typeData);
     }
 }

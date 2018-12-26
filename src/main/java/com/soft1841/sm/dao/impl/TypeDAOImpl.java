@@ -35,7 +35,7 @@ public class TypeDAOImpl implements TypeDAO {
 
 
     @Override
-    public List<Type> selectAllTypes() throws SQLException {
+    public List<javax.swing.text.html.parser.Entity> selectAllTypes() throws SQLException {
         //查询得到List<Entity>
         List<Entity> entityList =  Db.use().query("SELECT * FROM t_type ");
         //创建一个List<Type>，存放具体的商品类别

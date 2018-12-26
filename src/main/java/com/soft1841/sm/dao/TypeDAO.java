@@ -1,9 +1,9 @@
 package com.soft1841.sm.dao;
 
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 
+import javax.swing.text.html.parser.Entity;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -33,7 +33,7 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    List<Type> selectAllTypes() throws SQLException;
+    List<Entity> selectAllTypes() throws SQLException;
 
     /**
      * 根据id查询类别信息
