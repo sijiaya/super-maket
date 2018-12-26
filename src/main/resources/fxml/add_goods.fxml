@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 添加商品的布局文件
+<!-- 添加商品的fxml
 @author LiuLian-->
 
 <?import javafx.scene.control.*?>
