@@ -29,6 +29,7 @@ public class TypeServiceTest {
     public void addType(){
         Type type = new Type();
         type.setName("测试新类别");
+        type.setCover("https://");
         typeService.addType(type);
     }
 }
