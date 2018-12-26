@@ -10,6 +10,9 @@ import java.util.List;
  * 商品信息的增删改查
  */
 public interface GoodsDAO {
+    static void deleteBookById(long id) {
+    }
+
     /**
      * 查看商品列表的DAO
      * @return
@@ -40,4 +43,6 @@ public interface GoodsDAO {
      * @throws SQLException
      */
     List<Entity> selectGoodLike(String keywords) throws SQLException;
+
+    void updateGoods(Goods goods);
 }

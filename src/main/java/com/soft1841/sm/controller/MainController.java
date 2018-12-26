@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
+public class MainController  implements Initializable {
     @FXML
     private StackPane MainController;
     private Stage primaryStage;

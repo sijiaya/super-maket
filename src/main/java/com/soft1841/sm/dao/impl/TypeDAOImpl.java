@@ -4,8 +4,13 @@ import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Type;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author 郭瑞昌
+ *TypeDAO的实现类
+ */
 public class TypeDAOImpl implements TypeDAO {
     /**
      * 2018-12-25
@@ -30,14 +35,25 @@ public class TypeDAOImpl implements TypeDAO {
 
 
     @Override
-    public List<Entity> selectAllTypes() throws SQLException {
-        return Db.use().query("SELECT * FROM t_type");
+    public List<Type> selectAllTypes() throws SQLException {
+        //查询得到List<Entity>
+        List<Entity> entityList =  Db.use().query("SELECT * FROM t_type ");
+        //创建一个List<Type>，存放具体的商品类别
+        List<Type> typeList = new ArrayList<>();
+        //遍历entityList，将其转换为typeList
+        for (Entity entity:entityList) {
+            typeList.add(convertType(entity));
+        }
+        return typeList;
     }
 
 
+
+
     @Override
-    public Entity getTypeById(Long id) throws SQLException {
-        return Db.use().queryOne("SELECT * FROM t_type WHERE id = ?", id);
+    public Type getTypeById(long id) throws SQLException {
+        Entity entity = Db.use().queryOne("SELECT * FROM t_type WHERE id = ? ", id);
+        return convertType(entity);
     }
 
 
@@ -48,5 +64,17 @@ public class TypeDAOImpl implements TypeDAO {
                 .set("type_cover",type.getCover()),
                 Entity.create("t_type").set("id",type.getId())
         );
+    }
+    /**
+     * 将Entity转化为Type型方法
+     * @param entity
+     * @return
+     */
+    private Type convertType(Entity entity) {
+        Type type = new Type();
+        type.setId(entity.getLong("id"));
+        type.setName(entity.getStr("name"));
+        type.setCover(entity.getStr("cover"));
+        return type;
     }
 }

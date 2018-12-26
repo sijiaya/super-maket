@@ -33,7 +33,7 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    List<Entity> selectAllTypes() throws SQLException;
+    List<Type> selectAllTypes() throws SQLException;
 
     /**
      * 根据id查询类别信息
@@ -41,7 +41,7 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    Entity getTypeById(Long id) throws SQLException;
+    Type getTypeById(long id) throws SQLException;
 
     /**
      *更新类别
