@@ -47,8 +47,7 @@
       </Button>
       <CheckBox layoutX="111.0" layoutY="428.0" mnemonicParsing="false" text="记住密码" textFill="#31699a">
          <font>
-            <Font size="18.0" />
-         </font>
+            <Font size="18.0" />         </font>
       </CheckBox>
       <Label layoutX="383.0" layoutY="429.0" prefHeight="24.0" prefWidth="78.0" text="注册账号" textFill="#2b6190">
          <font>
