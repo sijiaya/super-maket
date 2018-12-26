@@ -10,10 +10,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -81,4 +85,18 @@ public class GoodsController implements Initializable {
         }
         goodsTable.setItems(goodsData);
     }
+    public void newGoodsStage() throws Exception {
+        Stage addGoodsStage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/add_goods.fxml"));
+        AnchorPane root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/css/style.css");
+        AddGoodsController addGoodsController = fxmlLoader.getController();
+        addGoodsController.setGoodsDate(goodsData);
+        addGoodsStage.setTitle("新增商品界面");
+        addGoodsStage.setResizable(false);
+        addGoodsStage.setScene(scene);
+        addGoodsStage.show();
+    }
 }
+

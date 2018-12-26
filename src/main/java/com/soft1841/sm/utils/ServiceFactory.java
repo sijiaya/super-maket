@@ -1,5 +1,6 @@
 package com.soft1841.sm.utils;
 import com.soft1841.sm.service.AdminLoginService;
+import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.service.SellerLoginService;
 import com.soft1841.sm.service.TypeService;
 import com.soft1841.sm.service.impl.AdminLoginServiceImpl;
@@ -10,8 +11,9 @@ public class ServiceFactory {
     public static SellerLoginService getSellerServiceInstance(){
         return new SellerLoginServiceImpl();
 
-
-
+    }
+    public static GoodsService getGoodsServiceImplInstance(){
+        return new GoodsServiceImpl();
     }
 
     public static AdminLoginService getAdminServiceInstance() {
