@@ -44,8 +44,25 @@ public class TypeServiceImpl implements TypeService {
         try {
             type = typeDAO.getTypeById(id);
         } catch (SQLException e) {
-            System.err.println("查询单个图书信息出现异常");
+            System.err.println("查询单个类别信息出现异常");
         }
         return type;
+    }
+
+    /**
+     * 添加类别
+     *
+     * @param type
+     * @return
+     */
+    @Override
+    public Long addType(Type type) {
+        long result = 0;
+        try {
+            result = typeDAO.insertType(type);
+        }catch (SQLException e){
+            System.err.println("新增商品类别出现异常");
+        }
+        return result;
     }
 }

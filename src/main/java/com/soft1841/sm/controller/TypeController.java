@@ -16,6 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -78,6 +79,7 @@ public class TypeController implements Initializable {
         typeTable.getColumns().add(delCol);
         typeList = typeService.selectAllType();
         showTypeData(typeList);
+
         typeTable.setRowFactory(tv -> {
             TableRow<Type> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -112,6 +114,27 @@ public class TypeController implements Initializable {
     }
     //增加分类，已经实现功能，目前待做弹出界面，待优化
     public void addType() {
+        //创建一个输入框
+        TextInputDialog dialog =  new TextInputDialog("新类别");
+        dialog.setTitle("商品类别");
+        dialog.setHeaderText("新增商品类别");
+        dialog.setContentText("请输入商品类别名称");
+        Optional<String> result = dialog.showAndWait();
+        //确认输入的内容
+        if (result.isPresent()){
+            //获得输入的内容
+            String typeName = result.get();
+            //创建type对象，插入数据库，并返回主键
+            Type type = new Type();
+            type.setName(typeName);
+            long id = 0;
+            id = typeService.addType(type);
+            type.setId(id);
+            //加入ObservableList，刷新模型视图，不用重新查询数据库就能看到结果
+            typeData.add(type);
+        }
+
+
     }
     //根据showTypeData给用户一个展现的方法
     private void showTypeData(List<Type> typeList) {

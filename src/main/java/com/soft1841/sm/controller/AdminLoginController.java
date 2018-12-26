@@ -20,7 +20,7 @@ import java.io.IOException;
 
 public class AdminLoginController {
     //登录接口方法的引用
-    private AdminLoginService adminLoginService =  ServiceFactory.getAdminServiceInstance();
+    private AdminLoginService adminLoginService = ServiceFactory.getAdminServiceInstance();
     private Stage primaryStage;
 
     @FXML
@@ -28,17 +28,21 @@ public class AdminLoginController {
 
     @FXML
     private PasswordField password;
-    public void setPrimaryStage(Stage primaryStage){this.primaryStage = primaryStage;}
-    public void Login() throws IOException, InterruptedException{
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
+    public void Login() throws IOException, InterruptedException {
         //获取用户输入的用户名和密码
         int job_id = Integer.parseInt(account.getText().trim());
         String psd = password.getText().trim();
         //返回布尔类型，使用adminLoginService方法查询用户输入的账号密码是否一致，并返回一个布尔值
-         boolean flag = adminLoginService.login(job_id,psd);
-         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-         alert.setTitle("信息提示");
-         //当flag为true则执行下列语句
-        if (flag){
+        boolean flag = adminLoginService.login(job_id, psd);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("信息提示");
+        //当flag为true则执行下列语句
+        if (flag) {
             alert.setContentText("恭喜你登录成功,1秒后跳转到管理界面");
             alert.show();
             Thread.sleep(1000);
@@ -54,7 +58,7 @@ public class AdminLoginController {
             mainStage.setMaximized(true);
             mainStage.setScene(scene);
             mainStage.show();
-        }else {
+        } else {
             alert.setTitle("登录失败");
             alert.setContentText("密码错误或用户不存在，登录失败");
             alert.show();

@@ -12,8 +12,17 @@ import java.util.List;
 public class TypeDAOTest {
     private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
     @Test
-    public void selectType() throws SQLException {
+    public void selectAllTypes() throws SQLException {
         List<Type> typeList = typeDAO.selectAllTypes();
         typeList.forEach(entity -> System.out.println(entity));
+    }
+
+
+
+    @Test
+    public void insertType() throws SQLException{
+        Type type = new Type();
+        type.setName("测试类别");
+        System.out.println(typeDAO.insertType(type));
     }
 }
