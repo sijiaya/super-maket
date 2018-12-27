@@ -17,6 +17,9 @@ public class ServiceFactory {
     public static AdminService getAdminsServiceInstance(){
         return new AdminServiceImpl();
     }
+    public static MemberService getMemberServiceInstance(){
+        return new MemberServiceImpl();
+    }
     public static SellerService getSellersServiceInstance(){return new SellerServiceImpl();}
 }
 
