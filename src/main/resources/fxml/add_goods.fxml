@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 添加商品的布局文件
-@author LiuLian-->
+
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -12,6 +11,7 @@
             prefHeight="500.0" prefWidth="600.0">
     <HBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
           minHeight="50" alignment="CENTER" styleClass="gray-theme">
+
         <Label text="新增商品信息" styleClass="font-title,gray-theme,font-white"/>
 
     </HBox>
@@ -20,12 +20,14 @@
         <ComboBox promptText="选择类别" fx:id="goodsType" prefWidth="120"/>
         <TextField promptText="商品名称" fx:id="goodsName"/>
         <HBox spacing="10">
+
             <TextField promptText="价格" fx:id="goodsPrice" prefWidth="290"/>
             <TextField promptText="会员价" fx:id="goodsVipPrice" prefWidth="290"/>
 
         </HBox>
         <TextField promptText="商品图片" fx:id="goodsPicture"/>
         <TextField promptText="商品描述" fx:id="goodsDescription" prefHeight="140"/>
+
         <padding>
             <Insets top="10" left="50" bottom="10" right="50"/>
         </padding>

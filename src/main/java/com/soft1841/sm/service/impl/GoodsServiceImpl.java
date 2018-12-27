@@ -6,17 +6,47 @@ import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.utils.DAOFactory;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GoodsServiceImpl implements GoodsService {
-    private GoodsDAO goodsDAO = DAOFactory.getGoodsDAOInstance();
+    private GoodsDAO goodsDAO =DAOFactory.getGoodsDAOInstance();
+
     @Override
     public Long addGoods(Goods goods) {
-        long result = 0;
+        return null;
+    }
+
+    @Override
+    public List<Goods> getAllGoods() {
+        List<Goods> goodsList = new ArrayList<>();
         try {
-            result = goodsDAO.insertGoods(goods);
+            goodsList = goodsDAO.selectGoods();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return result;
+        return goodsList;
+    }
+
+    @Override
+    public List<Goods> getGoodsByTypeId(int typeId) {
+        List<Goods>goodsList = new ArrayList<>();
+        try {
+            goodsList = goodsDAO.selectGoodsByTypeId(typeId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  goodsList;
+    }
+
+    @Override
+    public List<Goods> getGoodsLike(String keywords) {
+        List<Goods>goodsList = new ArrayList<>();
+        try {
+            goodsList = goodsDAO.selectGoodLike(keywords);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  goodsList;
     }
 }

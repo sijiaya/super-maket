@@ -8,14 +8,17 @@ import javafx.beans.property.SimpleStringProperty;
 public class Goods {
     private final SimpleLongProperty id = new SimpleLongProperty();
     private final SimpleLongProperty typeId = new SimpleLongProperty();
+    private final SimpleLongProperty barcode = new SimpleLongProperty();
     private final SimpleStringProperty name = new SimpleStringProperty("");
     private final SimpleDoubleProperty price = new SimpleDoubleProperty();
-    private final SimpleDoubleProperty vipPrice = new SimpleDoubleProperty();
+    private final SimpleDoubleProperty vip = new SimpleDoubleProperty();
     private final SimpleStringProperty description = new SimpleStringProperty("");
     private final SimpleStringProperty picture = new SimpleStringProperty("");
+    private final SimpleIntegerProperty inventory=new SimpleIntegerProperty();
 
     public Goods() {
     }
+
 
     public long getId() {
         return id.get();
@@ -39,6 +42,18 @@ public class Goods {
 
     public void setTypeId(long typeId) {
         this.typeId.set(typeId);
+    }
+
+    public long getBarcode() {
+        return barcode.get();
+    }
+
+    public SimpleLongProperty barcodeProperty() {
+        return barcode;
+    }
+
+    public void setBarcode(long barcode) {
+        this.barcode.set(barcode);
     }
 
     public String getName() {
@@ -65,16 +80,16 @@ public class Goods {
         this.price.set(price);
     }
 
-    public double getVipPrice() {
-        return vipPrice.get();
+    public double getVip() {
+        return vip.get();
     }
 
-    public SimpleDoubleProperty vipPriceProperty() {
-        return vipPrice;
+    public SimpleDoubleProperty vipProperty() {
+        return vip;
     }
 
-    public void setVipPrice(double vipPrice) {
-        this.vipPrice.set(vipPrice);
+    public void setVip(double vip) {
+        this.vip.set(vip);
     }
 
     public String getDescription() {
@@ -99,5 +114,32 @@ public class Goods {
 
     public void setPicture(String picture) {
         this.picture.set(picture);
+    }
+
+    public int getInventory() {
+        return inventory.get();
+    }
+
+    public SimpleIntegerProperty inventoryProperty() {
+        return inventory;
+    }
+
+    public void setInventory(int inventory) {
+        this.inventory.set(inventory);
+    }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", typeId=" + typeId +
+                ", barcode=" + barcode +
+                ", name=" + name +
+                ", price=" + price +
+                ", vip=" + vip +
+                ", description=" + description +
+                ", picture=" + picture +
+                ", inventory=" + inventory +
+                '}';
     }
 }
