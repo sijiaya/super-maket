@@ -25,14 +25,13 @@
             <TextField promptText="会员价" fx:id="goodsVipPrice" prefWidth="290"/>
 
         </HBox>
-        <TextField promptText="商品图片" fx:id="goodsPicture"/>
         <TextField promptText="商品描述" fx:id="goodsDescription" prefHeight="140"/>
 
         <padding>
             <Insets top="10" left="50" bottom="10" right="50"/>
         </padding>
     </VBox>
-    <Button text="确认" onAction="#addgoods" styleClass="btn-radius-large,gray-theme"
+    <Button text="确认" onAction="#addGoods" styleClass="btn-radius-large,gray-theme"
             AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="180"/>
 
 

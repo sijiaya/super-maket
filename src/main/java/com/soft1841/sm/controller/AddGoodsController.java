@@ -23,11 +23,11 @@ import java.util.ResourceBundle;
 public class AddGoodsController implements Initializable {
     private ObservableList<Goods> goodsDate = FXCollections.observableArrayList();
 
-    public ObservableList<Goods> getGoodsDate(){
+    public ObservableList<Goods> getGoodsDate() {
         return goodsDate;
     }
 
-    public void setGoodsDate(ObservableList<Goods> goodsDate){
+    public void setGoodsDate(ObservableList<Goods> goodsDate) {
         this.goodsDate = goodsDate;
     }
 
@@ -35,7 +35,7 @@ public class AddGoodsController implements Initializable {
     private ComboBox<Type> goodsType;
 
     @FXML
-    private TextField goodsName,goodsPrice;
+    private TextField goodsName, goodsPrice, goodsVip, goodsDescription;
 
 
     private ObservableList<Type> typeDate = FXCollections.observableArrayList();
@@ -49,19 +49,24 @@ public class AddGoodsController implements Initializable {
         typeList = typeService.getAllTypes();
         typeDate.addAll(typeList);
         goodsType.setItems(typeDate);
-        goodsType.getSelectionModel().selectedIndexProperty().addListener((options,oldValue,newValue)-> {
+        goodsType.getSelectionModel().selectedItemProperty().addListener((option, oldValue, newValue) -> {
                     typeId = newValue.getId();
-            }
+                }
         );
     }
-    public void addgoods() {
+
+    public void addGoods() {
         String name = goodsName.getText();
         String price = goodsPrice.getText();
+        String vip = goodsVip.getText();
+        String description = goodsDescription.getText();
         System.out.println(price);
         Goods goods = new Goods();
         goods.setTypeId(typeId);
         goods.setName(name);
         goods.setPrice(Double.parseDouble(price));
+        goods.setVip(Double.parseDouble(vip));
+        goods.setDescription(description);
         long id = goodsService.addGoods(goods);
         goods.setId(id);
         this.getGoodsDate().add(goods);

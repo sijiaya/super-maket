@@ -45,9 +45,7 @@ public class MainController  implements Initializable {
     public void listReader() throws Exception{
         switchView("reader.fxml");
     }
-    public void addGoods() throws Exception{
-        switchView("add_goods.fxml");
-    }
+
 
 
     //封装一个切换视图的方法，用来根据fxml文件切换视图内容

@@ -6,8 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Type {
     private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleStringProperty name = new SimpleStringProperty();
-    private final SimpleStringProperty cover = new SimpleStringProperty();
+    private final SimpleStringProperty name = new SimpleStringProperty("");
+    private final SimpleStringProperty cover = new SimpleStringProperty("");
 
 
     public Type() {
@@ -51,12 +51,7 @@ public class Type {
 
     @Override
     public String toString() {
-        return "Type{" +
-                "id=" + id +
-                ", name=" + name +
-                ", cover=" + cover +
-                '}';
+        return  name.get();
     }
-
 
 }
