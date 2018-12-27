@@ -5,7 +5,6 @@ import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.service.TypeService;
-import com.soft1841.sm.utils.DAOFactory;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,7 +12,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -52,7 +50,7 @@ public class AddGoodsController implements Initializable {
         typeDate.addAll(typeList);
         goodsType.setItems(typeDate);
         goodsType.getSelectionModel().selectedIndexProperty().addListener((options,oldValue,newValue)-> {
-                    typeId = newValue.getId;
+                    typeId = newValue.getId();
             }
         );
     }

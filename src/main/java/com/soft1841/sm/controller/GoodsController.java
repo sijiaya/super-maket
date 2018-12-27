@@ -40,9 +40,8 @@ public class GoodsController implements Initializable {
     private ObservableList<Goods> goodsData = FXCollections.observableArrayList();
 
     //图书类型模型数据集合
+    private ObservableList<Goods> goodsDate = FXCollections.observableArrayList();
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
-    private GoodsDAO goodsDAO= DAOFactory.getGoodsDAOInstance();
-    private TypeDAO typeDAO=DAOFactory.getTypeDAOInstance();
     private List<Entity> goodsList = null;
     private List<Entity> typeList = null;
 
@@ -64,13 +63,6 @@ public class GoodsController implements Initializable {
     }
 
     private void initTable() {
-        goodsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        try{
-            goodsList =goodsDAO.selectGoods();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        showGoodData(goodsList);
     }
 
     private void showGoodData(List<Entity> goodsList) {
