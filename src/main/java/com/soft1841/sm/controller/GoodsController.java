@@ -1,13 +1,9 @@
 package com.soft1841.sm.controller;
 
-import cn.hutool.db.Entity;
-import com.soft1841.sm.dao.GoodsDAO;
-import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.service.TypeService;
-import com.soft1841.sm.utils.DAOFactory;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,9 +15,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class GoodsController implements Initializable {

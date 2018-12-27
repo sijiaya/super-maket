@@ -5,12 +5,12 @@ import cn.hutool.db.Entity;
 import javafx.beans.property.SimpleLongProperty;
 
 public class Seller{
-private Long id;
-private Long work_id;
-private String password;
-private String name;
-private String avatar;
-private String address;
+    private Long id;
+    private Long work_id;
+    private String password;
+    private String name;
+    private String avatar;
+    private String address;
 
     public Seller(Long id, Long work_id, String password, String name, String avatar, String address) {
         this.id = id;

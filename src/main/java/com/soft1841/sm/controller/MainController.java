@@ -42,8 +42,8 @@ public class MainController  implements Initializable {
     public void listAdmin() throws Exception {
         switchView("admin.fxml");
     }
-    public void listReader() throws Exception{
-        switchView("reader.fxml");
+    public void listSeller() throws Exception{
+        switchView("seller.fxml");
     }
 
     //封装一个切换视图的方法，用来根据fxml文件切换视图内容
