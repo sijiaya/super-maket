@@ -1,7 +1,6 @@
 package com.soft1841.sm.service.impl;
 
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.service.GoodsService;
@@ -44,6 +43,38 @@ public class GoodsServiceImpl implements GoodsService {
             e.printStackTrace();
         }
         return  goodsList;
+    }
+
+    /**
+     * 添加商品
+     *
+     * @param goods
+     * @return
+     */
+    @Override
+    public Long addGoods(Goods goods) {
+        long result = 0;
+        try {
+            //调用底层DAO的查询新增商品方法，薄层封装，返回自增主键
+            result = goodsDAO.insertGoods(goods);
+        }catch (SQLException e){
+            System.err.println("新增商品出现异常");
+        }
+        return result;
+    }
+
+    /**
+     * 删除商品
+     *
+     * @param id
+     */
+    @Override
+    public void deleteGoods(long id) {
+        try {
+            goodsDAO.deleteGoodsById(id);
+        }catch (SQLException e){
+            System.err.println("删除商品出现异常");
+        }
     }
 }
 

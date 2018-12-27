@@ -55,6 +55,21 @@ public  class GoodsDAOImpl implements GoodsDAO {
         }
         return goodsList;
     }
+
+    /**
+     * 根据id删除商品
+     *
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    @Override
+    public int deleteGoodsById(long id) throws SQLException {
+        return Db.use().del(
+                Entity.create("t_goods").set("id",id)
+        );
+    }
+
     private Goods convertGoods(Entity entity) {
         Goods goods = new Goods();
         goods.setId(entity.getLong("id"));

@@ -44,5 +44,13 @@ public interface GoodsDAO {
     List<Goods> selectGoodLike(String keywords) throws SQLException;
 
 
+    /**
+     * 根据id删除商品
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    int deleteGoodsById(long id) throws SQLException;
+
 
 }

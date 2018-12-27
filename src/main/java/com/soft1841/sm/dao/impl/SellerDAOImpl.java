@@ -40,7 +40,7 @@ public class SellerDAOImpl implements SellerDAO {
     }
 
     /**
-     * 单行SQL语句，从数据库i查询用户输入的用户名
+     * 单行SQL语句，从数据库查询用户输入的用户名
      * @param work_id
      * @return
      * @throws SQLException

@@ -35,7 +35,7 @@ public class GoodsController implements Initializable {
     private ObservableList<Goods> goodsData = FXCollections.observableArrayList();
     //图书类型模型数据集合
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
-    private GoodsService goodsService =ServiceFactory.geGoodServiceInstance();
+    private GoodsService goodsService =ServiceFactory.getGoodServiceInstance();
     private TypeService typeService = ServiceFactory.getTypeServiceInstance();
     private List<Goods> goodsList = null;
     private List<Type> typeList = null;
