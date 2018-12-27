@@ -35,11 +35,11 @@ public class AddGoodsController implements Initializable {
     private ComboBox<Type> goodsType;
 
     @FXML
-    private TextField goodsName, goodsPrice, goodsVip, goodsDescription;
+    private TextField goodsName, goodsPrice, goodsVipPrice, goodsDescription,goodsPicture,goodsBarcode,goodsInventory;
 
 
     private ObservableList<Type> typeDate = FXCollections.observableArrayList();
-    private GoodsService goodsService = ServiceFactory.getGoodsServiceImplInstance();
+    private GoodsService goodsService = ServiceFactory.getGoodServiceInstance();
     private TypeService typeService = ServiceFactory.getTypeServiceInstance();
     private List<Type> typeList = null;
     private Long typeId;
@@ -58,8 +58,11 @@ public class AddGoodsController implements Initializable {
     public void addGoods() {
         String name = goodsName.getText();
         String price = goodsPrice.getText();
-        String vip = goodsVip.getText();
+        String vip = goodsVipPrice.getText();
         String description = goodsDescription.getText();
+        String picture = goodsPicture.getText();
+        String barcode = goodsBarcode.getText();
+        String inventory = goodsInventory.getText();
         System.out.println(price);
         Goods goods = new Goods();
         goods.setTypeId(typeId);
@@ -67,6 +70,9 @@ public class AddGoodsController implements Initializable {
         goods.setPrice(Double.parseDouble(price));
         goods.setVip(Double.parseDouble(vip));
         goods.setDescription(description);
+        goods.setPicture(picture);
+        goods.setBarcode(Long.parseLong(barcode));
+        goods.setInventory(Integer.parseInt(inventory));
         long id = goodsService.addGoods(goods);
         goods.setId(id);
         this.getGoodsDate().add(goods);

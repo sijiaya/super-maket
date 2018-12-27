@@ -17,7 +17,13 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public Long addGoods(Goods goods) {
-        return null;
+        long result = 0;
+        try {
+            result = goodsDAO.insertGoods(goods);
+        } catch (SQLException e) {
+            System.err.println("新增图书出现异常");
+        }
+        return result;
     }
 
     @Override

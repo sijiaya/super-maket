@@ -21,7 +21,6 @@ public interface GoodsService {
 
     /**
      * 获取所有商品
->>>>>>> origin/master
      * @return
      */
     List<Goods> getAllGoods();

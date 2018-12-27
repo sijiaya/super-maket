@@ -43,9 +43,6 @@ public class GoodsController implements Initializable {
 
 
 
-
-    public void newGoodsStage(ActionEvent actionEvent) {
-    }
     //根据关键词搜索方法
     public void search() {
         goodsTable.getItems().removeAll(goodsData);

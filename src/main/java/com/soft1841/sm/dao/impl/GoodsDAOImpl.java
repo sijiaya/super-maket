@@ -31,6 +31,8 @@ public  class GoodsDAOImpl implements GoodsDAO {
                         .set("vip", goods.getVip())
                         .set("description", goods.getDescription())
                         .set("picture",goods.getPicture())
+                .set("barcode",goods.getBarcode())
+                .set("inventory",goods.getInventory())
         );
     }
 
