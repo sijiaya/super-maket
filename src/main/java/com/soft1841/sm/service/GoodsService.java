@@ -8,6 +8,7 @@ public interface GoodsService {
 
 
 
+
     /**
      * 新增商品
      * @param goods
@@ -17,12 +18,20 @@ public interface GoodsService {
 
     /**
      *
+
+    /**
+     * 获取所有商品
+>>>>>>> origin/master
      * @return
      */
     List<Goods> getAllGoods();
 
     /**
+<<<<<<< HEAD
      *
+=======
+     * 根据商品编号查询
+>>>>>>> origin/master
      * @param typeId
      * @return
      */
@@ -35,4 +44,12 @@ public interface GoodsService {
      */
     List<Goods> getGoodsLike(String keywords);
 
+
+
+    /**
+     * 删除商品
+     * @param id
+     */
+    void deleteGoods(long id);
 }
+

@@ -34,10 +34,11 @@ public class GoodsController implements Initializable {
     //图书类型模型数据集合
     private ObservableList<Goods> goodsDate = FXCollections.observableArrayList();
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
+
+    private GoodsService goodsService =ServiceFactory.getGoodServiceInstance();
+    private TypeService typeService = ServiceFactory.getTypeServiceInstance();
     private List<Goods> goodsList = null;
     private List<Type> typeList = null;
-    private GoodsService goodsService =ServiceFactory.geGoodServiceInstance();
-    private TypeService typeService = ServiceFactory.getTypeServiceInstance();
 
 
 
@@ -63,7 +64,7 @@ public class GoodsController implements Initializable {
 
 
     private void initComBox() {
-        typeList = typeService.selectAllType();
+        typeList = typeService.getAllTypes();
         typeData.addAll(typeList);
         typeComboBox.setItems(typeData);
         typeComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {

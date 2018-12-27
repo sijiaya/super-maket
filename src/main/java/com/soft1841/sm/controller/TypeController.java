@@ -118,15 +118,17 @@ public class TypeController implements Initializable {
             return row;
         });
     }
-    //增加分类，已经实现功能，目前待做弹出界面，待优化
-    public void addType() throws IOException {
+    //增加分类，已经实现功能
+    public void addType(){
         Stage addTypeStage = new Stage();
         VBox vBox = new VBox();
+        vBox.setSpacing(30);
+        vBox.setPadding(new Insets(10,20,20,20));
         TextField textField = new TextField("类别名称");
         TextField textField1 = new TextField("类别图像");
         Button button = new Button("确认添加");
         vBox.getChildren().addAll(textField,textField1,button);
-        Scene scene = new Scene(vBox);
+        Scene scene = new Scene(vBox,600,400);
         addTypeStage.setTitle("新增图书界面");
         //界面大小不可变
         addTypeStage.setResizable(false);

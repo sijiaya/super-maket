@@ -39,8 +39,8 @@ public class MainController  implements Initializable {
         switchView("goods.fxml");
     }
 
-    public void listUser() throws Exception {
-        switchView("user.fxml");
+    public void listAdmin() throws Exception {
+        switchView("admin.fxml");
     }
     public void listReader() throws Exception{
         switchView("reader.fxml");

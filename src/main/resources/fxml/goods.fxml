@@ -28,9 +28,9 @@
                 </cellValueFactory>
             </TableColumn>
 
-            <TableColumn text="typeId">
+            <TableColumn text="名称">
                 <cellValueFactory>
-                    <PropertyValueFactory property="typeId"/>
+                    <PropertyValueFactory property="name"/>
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="价格">

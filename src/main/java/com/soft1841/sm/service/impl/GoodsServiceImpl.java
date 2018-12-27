@@ -1,11 +1,14 @@
 package com.soft1841.sm.service.impl;
 
+
 import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.utils.DAOFactory;
 
 import java.sql.SQLException;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,4 +52,18 @@ public class GoodsServiceImpl implements GoodsService {
         }
         return  goodsList;
     }
+
+    @Override
+    public void deleteGoods(long id) {
+
+    }
 }
+
+
+
+
+
+
+
+
+

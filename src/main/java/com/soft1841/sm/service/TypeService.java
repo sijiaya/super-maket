@@ -35,10 +35,8 @@ public interface TypeService {
      * @return
      */
     Long addType(Type type);
-    /**
-     * 获取所有图书类别的功能
-     * @return
-     */
+
+
     List<Type> getAllTypes();
 
 }
