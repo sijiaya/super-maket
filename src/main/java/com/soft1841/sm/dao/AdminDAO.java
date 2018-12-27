@@ -29,7 +29,7 @@ public interface AdminDAO {
      * @return
      * @throws SQLException
      */
-    List<Entity> selectAllAdmin() throws SQLException;
+    List<Admin> selectAllAdmin() throws SQLException;
 
     /**
      * 根据工号查询某个管理员

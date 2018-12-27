@@ -51,11 +51,7 @@ public class Type {
 
     @Override
     public String toString() {
-        return "Type{" +
-                "id=" + id +
-                ", name=" + name +
-                ", cover=" + cover +
-                '}';
+      return name.get();
     }
 
 

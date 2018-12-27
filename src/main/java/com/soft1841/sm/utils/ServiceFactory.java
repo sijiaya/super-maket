@@ -18,6 +18,9 @@ public class ServiceFactory {
     public static GoodsService getGoodServiceInstance(){
         return new GoodsServiceImpl();
     }
+    public static AdminService getAdminsServiceInstance(){
+        return new AdminServiceImpl();
+    }
 }
 
 

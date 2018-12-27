@@ -61,7 +61,7 @@ public class GoodsController implements Initializable {
 
 
     private void initComBox() {
-        typeList = typeService.selectAllType();
+        typeList = typeService.getAllTypes();
         typeData.addAll(typeList);
         typeComboBox.setItems(typeData);
         typeComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {

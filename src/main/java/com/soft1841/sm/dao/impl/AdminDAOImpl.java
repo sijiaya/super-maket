@@ -6,6 +6,7 @@ import com.soft1841.sm.dao.AdminDAO;
 import com.soft1841.sm.entity.Admin;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDAOImpl implements AdminDAO {
@@ -24,8 +25,13 @@ public class AdminDAOImpl implements AdminDAO {
 
     //查询所有管理者
     @Override
-    public List<Entity> selectAllAdmin() throws SQLException {
-        return null;
+    public List<Admin> selectAllAdmin() throws SQLException {
+        List<Entity> entityList = Db.use().query("SELECT * FROM t_admin ");
+        List<Admin> adminList = new ArrayList<>();
+        for (Entity entity : entityList) {
+            adminList.add(convertAdmin(entity));
+        }
+        return adminList;
     }
 
 

@@ -34,4 +34,5 @@ public interface TypeService {
      * @return
      */
     Long addType(Type type);
+    List<Type> getAllTypes();
 }
