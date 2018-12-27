@@ -10,6 +10,7 @@ import java.util.List;
  * 22.37
  */
 public interface TypeService {
+
     /**
      * 查询所有商品类别
      * @return
@@ -34,5 +35,8 @@ public interface TypeService {
      * @return
      */
     Long addType(Type type);
+
+
     List<Type> getAllTypes();
+
 }

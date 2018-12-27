@@ -1,8 +1,9 @@
 package com.soft1841.sm.dao;
 
 import cn.hutool.db.Entity;
+import com.soft1841.sm.entity.Member;
 
-import java.lang.reflect.Member;
+;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -15,24 +16,21 @@ public interface MemberDAO {
     Long insertMember(Member member) throws SQLException;
 
     /**
-     * 删除会员
-     * @param number
+     *
+     * @param id
      * @return
+     * @throws SQLException
      */
-    int deleteMember(String number) throws SQLException;
+    int deleteById(Long id) throws SQLException;
+
+
 
     /**
      * 查询所有会员
      * @return
      * @throws SQLException
      */
-    List<Entity> selectAllMember() throws SQLException;
+    List<Member> selectAllMember() throws SQLException;
 
-    /**
-     * 更新会员信息
-     * @param number
-     * @return
-     * @throws SQLException
-     */
-    int updateMember(String number) throws SQLException;
+
 }

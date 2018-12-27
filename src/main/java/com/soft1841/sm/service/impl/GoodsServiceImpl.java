@@ -7,11 +7,25 @@ import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.utils.DAOFactory;
 
 import java.sql.SQLException;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class GoodsServiceImpl implements GoodsService {
     private GoodsDAO goodsDAO =DAOFactory.getGoodsDAOInstance();
+
+    @Override
+    public Long addGoods(Goods goods) {
+        long result = 0;
+        try {
+            result = goodsDAO.insertGoods(goods);
+        } catch (SQLException e) {
+            System.err.println("新增图书出现异常");
+        }
+        return result;
+    }
+
     @Override
     public List<Goods> getAllGoods() {
         List<Goods> goodsList = new ArrayList<>();
@@ -45,40 +59,15 @@ public class GoodsServiceImpl implements GoodsService {
         return  goodsList;
     }
 
-    /**
-     * 添加商品
-     *
-     * @param goods
-     * @return
-     */
-    @Override
-    public Long addGoods(Goods goods) {
-        long result = 0;
-        try {
-            //调用底层DAO的查询新增商品方法，薄层封装，返回自增主键
-            result = goodsDAO.insertGoods(goods);
-        }catch (SQLException e){
-            System.err.println("新增商品出现异常");
-        }
-        return result;
-    }
-
-    /**
-     * 删除商品
-     *
-     * @param id
-     */
     @Override
     public void deleteGoods(long id) {
         try {
             goodsDAO.deleteGoodsById(id);
-        }catch (SQLException e){
-            System.err.println("删除商品出现异常");
+        } catch (SQLException e) {
+            System.err.println("删除图书出现异常");
         }
     }
 }
-
-
 
 
 

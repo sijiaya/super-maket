@@ -46,6 +46,8 @@ public class MainController  implements Initializable {
         switchView("seller.fxml");
     }
 
+
+
     //封装一个切换视图的方法，用来根据fxml文件切换视图内容
     private void switchView(String fileName) throws Exception {
         //清除主面板之前内容
