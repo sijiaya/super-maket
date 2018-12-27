@@ -19,7 +19,13 @@ public class TypeServiceImpl implements TypeService {
     public List<Type> selectAllType() {
         List<Type> typeList = new ArrayList<>();
         //调用底层TypeDAO的查询类别方法，得到一个typeList
-
+        try {
+            //调用底层DAO的查询所有类别的方法，得到一个typeList，薄层封装
+            typeList = typeDAO.selectAllTypes();
+        } catch (SQLException e) {
+            //友好处理异常
+            System.err.println("查询所有类别出现异常!");
+        }
         return typeList;
     }
 

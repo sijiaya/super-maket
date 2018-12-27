@@ -19,9 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
-
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -129,7 +127,7 @@ public class TypeController implements Initializable {
         Button button = new Button("确认添加");
         vBox.getChildren().addAll(textField,textField1,button);
         Scene scene = new Scene(vBox,600,400);
-        addTypeStage.setTitle("新增商品界面");
+        addTypeStage.setTitle("新增分类界面");
         //界面大小不可变
         addTypeStage.setResizable(false);
         addTypeStage.setScene(scene);
@@ -153,7 +151,7 @@ public class TypeController implements Initializable {
 
     //根据showTypeData给用户一个展现的方法
     private void showTypeData(List<Type> typeList) {
-        typeData.addAll((Type) typeList);
+        typeData.addAll(typeList);
         typeTable.setItems(typeData);
     }
 }

@@ -33,7 +33,8 @@
             <Insets bottom="10" left="50" right="50" top="10" />
         </padding>
     </VBox>
-    <Button onAction="#addGoods" styleClass="btn-radius-large,gray-theme" text="确认" AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="180" />
+    <Button onAction="#addGoods" styleClass="btn-radius-large,gray-theme" text="确认" AnchorPane.bottomAnchor="5"
+            AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="180" />
 
 
 </AnchorPane>

@@ -61,7 +61,11 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public void deleteGoods(long id) {
-
+        try {
+            goodsDAO.deleteGoodsById(id);
+        } catch (SQLException e) {
+            System.err.println("删除图书出现异常");
+        }
     }
 }
 
