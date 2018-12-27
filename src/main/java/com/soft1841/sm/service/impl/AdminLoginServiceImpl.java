@@ -19,9 +19,9 @@ public class AdminLoginServiceImpl implements AdminLoginService {
             //调用SellDAO方法中的查询方法，查询工号
             admin = adminDAO.getUserByName(job_id);
         }catch (NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("错误");
-            alert.setContentText("用户名不存在");
+              Alert alert = new Alert(Alert.AlertType.INFORMATION);
+               alert.setTitle("错误");
+              alert.setContentText("用户名不存在");
         } catch (SQLException e) {
             e.printStackTrace();
         }

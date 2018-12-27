@@ -1,10 +1,6 @@
 package com.soft1841.sm.controller;
 
-import com.soft1841.sm.dao.SellerDAO;
-import com.soft1841.sm.entity.Admin;
-import com.soft1841.sm.entity.Seller;
 import com.soft1841.sm.service.SellerLoginService;
-import com.soft1841.sm.utils.DAOFactory;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
