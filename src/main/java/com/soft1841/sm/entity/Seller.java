@@ -1,9 +1,10 @@
 package com.soft1841.sm.entity;
 
 
+import cn.hutool.db.Entity;
 import javafx.beans.property.SimpleLongProperty;
 
-public class Seller {
+public class Seller{
 private Long id;
 private Long work_id;
 private String password;
