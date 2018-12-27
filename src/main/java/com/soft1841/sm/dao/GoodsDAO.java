@@ -10,15 +10,14 @@ import java.util.List;
  * 商品信息的增删改查
  */
 public interface GoodsDAO {
-    static void deleteBookById(long id) {
-    }
+
 
     /**
      * 查看商品列表的DAO
      * @return
      * @throws SQLException
      */
-    List<Entity> selectGoods() throws SQLException;
+    List<Goods> selectGoods() throws SQLException;
 
     /**
      * 往数据库中插入商品
@@ -34,7 +33,7 @@ public interface GoodsDAO {
      * @throws SQLException
      */
 
-    List<Entity> selectGoodsByTypeId(int typeId) throws SQLException;
+    List<Goods> selectGoodsByTypeId(int typeId) throws SQLException;
 
     /**
      * 根据商品名关键词模糊查询商品
@@ -42,12 +41,8 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    List<Entity> selectGoodLike(String keywords) throws SQLException;
+    List<Goods> selectGoodLike(String keywords) throws SQLException;
 
-    /**
-     * 更新商品信息
-     * @param goods
-     * @return
-     */
-    void updateGoods(Goods goods) ;
+
+
 }

@@ -57,4 +57,6 @@ public class Type {
                 ", cover=" + cover +
                 '}';
     }
+
+
 }

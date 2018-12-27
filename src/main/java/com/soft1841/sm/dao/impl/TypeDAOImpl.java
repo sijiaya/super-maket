@@ -44,7 +44,7 @@ public class TypeDAOImpl implements TypeDAO {
         for (Entity entity:entityList) {
             typeList.add(convertType(entity));
         }
-        return typeList;
+      return typeList;
     }
 
 
