@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Member {
     private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleStringProperty number = new SimpleStringProperty();
+    private final SimpleLongProperty number = new SimpleLongProperty();
     private final SimpleStringProperty name = new SimpleStringProperty();
     private final SimpleStringProperty address = new SimpleStringProperty();
     private final SimpleStringProperty phone = new SimpleStringProperty();
@@ -27,15 +27,15 @@ public class Member {
         this.id.set(id);
     }
 
-    public String getNumber() {
+    public long getNumber() {
         return number.get();
     }
 
-    public SimpleStringProperty numberProperty() {
+    public SimpleLongProperty numberProperty() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(long number) {
         this.number.set(number);
     }
 
