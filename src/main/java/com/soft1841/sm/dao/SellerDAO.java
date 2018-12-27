@@ -17,7 +17,7 @@ public interface SellerDAO {
      * @param seller
      * @return
      */
-    Integer insertSeller(Seller seller) throws SQLException;
+    Long insertSeller(Seller seller) throws SQLException;
 
     /**
      * 根据工号删除收银员
@@ -32,7 +32,7 @@ public interface SellerDAO {
      * @return
      * @throws SQLException
      */
-    List<Entity> selectAllSeller() throws SQLException;
+    List<Seller> selectAllSeller() throws SQLException;
 
     /**
      * 根据工号查询某个收银员

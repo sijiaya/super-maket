@@ -127,7 +127,7 @@ public class TypeController implements Initializable {
         Button button = new Button("确认添加");
         vBox.getChildren().addAll(textField,textField1,button);
         Scene scene = new Scene(vBox,600,400);
-        addTypeStage.setTitle("新增图书界面");
+        addTypeStage.setTitle("新增商品界面");
         //界面大小不可变
         addTypeStage.setResizable(false);
         addTypeStage.setScene(scene);
