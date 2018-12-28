@@ -69,6 +69,7 @@ public class SellerController implements Initializable {
             //修改功能，根据用户输入旧密码是否正确并提供友好的报错
             updateButton.getStyleClass().add("warm-theme");
             delButton.getStyleClass().add("warning-theme");
+            String use = String.valueOf(seller.getWork_id());
             rightBox.getChildren().addAll(addressLabel, delButton, updateButton);
             updateButton.setOnAction(event -> {
                 Stage stage = new Stage();
@@ -78,12 +79,12 @@ public class SellerController implements Initializable {
                 TextField textField = new TextField("请输入旧密码");
                 TextField textField1 = new TextField("请输入新密码");
                 Button button = new Button("确认修改");
-                String use = String.valueOf(seller.getWork_id());
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 button.setOnAction(event1 -> {
                     String oldPsd = textField.getText();
                     String newPsd = textField1.getText();
-                    boolean update = sellerLoginService.updatePasswd(oldPsd);
+                    boolean update = sellerLoginService.login(use,oldPsd);
+                    System.out.println(update);
                     if (update) {
                         Seller seller1 = new Seller();
                         long id = seller.getId();
