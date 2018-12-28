@@ -15,7 +15,7 @@ public class MemberDAOTest {
         member.setName("李莉");
         member.setAddress("浙江杭州");
         member.setPhone("18893027961");
-        member.setIntegral(60);
+        member.setIntegral("60");
         System.out.println(memberDAO.insertMember(member));
 
     }
@@ -29,6 +29,6 @@ public class MemberDAOTest {
     }
     @Test
     public void deleteById() throws SQLException {
-        memberDAO.deleteById((long) 1);
+        memberDAO.deleteMemberById((long) 1);
     }
 }

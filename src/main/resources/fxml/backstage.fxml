@@ -64,6 +64,7 @@
                             <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
                                 <Button text="管理员信息" styleClass="btn-second" onAction="#listAdmin"/>
                                 <Button text="收银员信息" styleClass="btn-second" onAction="#listSeller"/>
+                                <Button text="会员信息" styleClass="btn-second" onAction="#listMember"/>
                                 <Button text="统计分析" styleClass="btn-second"/>
                             </VBox>
                         </TitledPane>

@@ -10,9 +10,21 @@ public class Member {
     private final SimpleStringProperty name = new SimpleStringProperty();
     private final SimpleStringProperty address = new SimpleStringProperty();
     private final SimpleStringProperty phone = new SimpleStringProperty();
-    private final SimpleIntegerProperty integral = new SimpleIntegerProperty();
+    private final SimpleStringProperty integral = new SimpleStringProperty();
 
     public Member() {
+    }
+
+    public String getIntegral() {
+        return integral.get();
+    }
+
+    public SimpleStringProperty integralProperty() {
+        return integral;
+    }
+
+    public void setIntegral(String integral) {
+        this.integral.set(integral);
     }
 
     public long getId() {
@@ -75,17 +87,6 @@ public class Member {
         this.phone.set(phone);
     }
 
-    public int getIntegral() {
-        return integral.get();
-    }
-
-    public SimpleIntegerProperty integralProperty() {
-        return integral;
-    }
-
-    public void setIntegral(int integral) {
-        this.integral.set(integral);
-    }
 
     @Override
     public String toString() {

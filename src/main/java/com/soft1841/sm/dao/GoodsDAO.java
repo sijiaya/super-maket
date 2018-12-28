@@ -26,7 +26,7 @@ public interface GoodsDAO {
     Long insertGoods(Goods goods) throws SQLException;
 
     /**
-     *
+     *根据商品编号查找
      * @param typeId
      * @return
      * @throws SQLException

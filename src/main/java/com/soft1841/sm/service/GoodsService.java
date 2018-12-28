@@ -26,11 +26,7 @@ public interface GoodsService {
     List<Goods> getAllGoods();
 
     /**
-<<<<<<< HEAD
-     *
-=======
      * 根据商品编号查询
->>>>>>> origin/master
      * @param typeId
      * @return
      */

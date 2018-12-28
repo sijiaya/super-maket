@@ -1,6 +1,5 @@
 package com.soft1841.sm.dao;
 
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Member;
 
 ;
@@ -16,12 +15,12 @@ public interface MemberDAO {
     Long insertMember(Member member) throws SQLException;
 
     /**
-     *
+     *根据id删除会员
      * @param id
      * @return
      * @throws SQLException
      */
-    int deleteById(Long id) throws SQLException;
+    int deleteMemberById(Long id) throws SQLException;
 
 
 
