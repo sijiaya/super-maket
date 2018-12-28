@@ -59,4 +59,5 @@ public interface SellerDAO {
      * @throws SQLException
      */
     Seller getUserByName(String work_id) throws SQLException;
+    Seller getPasswordByWork_id(String password) throws SQLException;
 }

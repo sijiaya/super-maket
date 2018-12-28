@@ -1,11 +1,7 @@
 package com.soft1841.sm.service;
-
 import com.soft1841.sm.entity.Seller;
-
 import java.util.List;
-
 public interface SellerService {
-
     /**
      * 获取所有收银员
      * @return
@@ -23,4 +19,10 @@ public interface SellerService {
      * @param id
      */
     void deleteSeller(long id);
+
+    /**
+     * 修改收银员信息
+     * @param seller
+     */
+    void updateSeller(Seller seller);
 }

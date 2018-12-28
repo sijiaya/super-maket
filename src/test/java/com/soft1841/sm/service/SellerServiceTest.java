@@ -33,4 +33,12 @@ public class SellerServiceTest {
     public void deleteSeller() {
         sellerService.deleteSeller(4);
     }
+
+    @Test
+    public void updateSeller() {
+        Seller seller = new Seller();
+        seller.setId(1l);
+        seller.setPassword("name1");
+        sellerService.updateSeller(seller);
+    }
 }

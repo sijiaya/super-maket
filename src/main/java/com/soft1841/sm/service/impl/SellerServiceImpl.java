@@ -41,4 +41,13 @@ public class SellerServiceImpl implements SellerService {
             System.err.println("删除收银员信息失败");
         }
     }
+
+    @Override
+    public void updateSeller(Seller seller) {
+        try {
+            sellerDAO.updateSeller(seller);
+        } catch (SQLException e) {
+            System.err.println("修改收银员信息出现异常");
+        }
+    }
 }

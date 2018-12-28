@@ -62,8 +62,7 @@ public class SellerDAOImpl implements SellerDAO {
     @Override
     public int updateSeller(Seller seller) throws SQLException {
         return Db.use().update(
-                Entity.create().set("password",seller.getPassword())
-                .set("name",seller.getName()),
+                Entity.create().set("password",seller.getPassword()),
                 Entity.create("t_seller").set("id",seller.getId())
         );
     }
@@ -81,6 +80,14 @@ public class SellerDAOImpl implements SellerDAO {
         //使用convertSeller方法将entity型转化为Seller
         return convertSeller(entity);
     }
+
+    @Override
+    public Seller getPasswordByWork_id(String password) throws SQLException {
+        Entity entity = Db.use().queryOne("select * from t_seller where password = ?" ,password);
+        //使用convertSeller方法将entity型转化为Seller
+        return convertSeller(entity);
+    }
+
     private Seller convertSeller(Entity entity){
         //给Seller定义数据库中的列名
         Seller seller = new Seller(entity.getLong("id"),

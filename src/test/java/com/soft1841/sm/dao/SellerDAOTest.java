@@ -12,7 +12,6 @@ public class SellerDAOTest {
         Seller seller = new Seller();
         seller.setId(1l);
         seller.setPassword("name");
-        seller.setName("ceshi");
         sellerDAO.updateSeller(seller);
     }
 
@@ -36,5 +35,10 @@ public class SellerDAOTest {
     @Test
     public void deleteSeller() throws SQLException {
         sellerDAO.deleteSeller(Long.valueOf(5));
+    }
+
+    @Test
+    public void getPasswordByWork_id() throws SQLException {
+        System.out.println(sellerDAO.getPasswordByWork_id("name1"));
     }
 }
