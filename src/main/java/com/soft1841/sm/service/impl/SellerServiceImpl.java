@@ -42,6 +42,10 @@ public class SellerServiceImpl implements SellerService {
         }
     }
 
+    /**
+     * 修改员工信息
+     * @param seller
+     */
     @Override
     public void updateSeller(Seller seller) {
         try {

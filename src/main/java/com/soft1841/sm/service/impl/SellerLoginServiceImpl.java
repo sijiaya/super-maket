@@ -1,12 +1,9 @@
 package com.soft1841.sm.service.impl;
-import cn.hutool.db.Db;
-import cn.hutool.db.Entity;
 import com.soft1841.sm.dao.SellerDAO;
 import com.soft1841.sm.entity.Seller;
 import com.soft1841.sm.service.SellerLoginService;
 import com.soft1841.sm.utils.DAOFactory;
 import javafx.scene.control.Alert;
-
 import java.sql.SQLException;
 
 /**
@@ -39,6 +36,12 @@ public class SellerLoginServiceImpl implements SellerLoginService {
         return false;
     }
 
+    /**
+     * 判定数据库中是否存在此密码，并对在用户输入旧密码错误时造成的空值异常给予友好的
+     * 报错
+     * @param password
+     * @return
+     */
     @Override
     public boolean updatePasswd(String password) {
         Seller seller = null;

@@ -50,7 +50,6 @@ public interface SellerDAO {
      * @throws SQLException
      */
     int updateSeller(Seller seller) throws SQLException;
-
     /**
      * 定义查询类型，获取数据库中的用户名
      * 登录方面

@@ -1,14 +1,15 @@
 package com.soft1841.sm.controller;
-
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-
 import java.io.File;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+/**
+ * @author 郭瑞昌
+ * 修改辛苦，请留名
+ */
 public class BackUpController implements Initializable {
     /**
      * 备份数据库db
@@ -25,7 +26,7 @@ public class BackUpController implements Initializable {
         if (!fileSql.exists()){
             fileSql.createNewFile();
         }
-        //mysqldump -hlocalhost -uroot -p123456 db > /home/back.sql
+        //Mysql数据库备份命令mysqldump -hlocalhost -uroot -p123456 db > /home/back.sql
         StringBuffer sb = new StringBuffer();
         sb.append("mysqldump");
         sb.append(" -hlocalhost");
@@ -33,11 +34,6 @@ public class BackUpController implements Initializable {
         sb.append(" -p"+pwd);
         sb.append(" "+dbName+" >");
         sb.append(pathSql);
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("正在为您执行备份");
-        Thread.sleep(1000);
-        alert.close();
-        alert.setContentText("备份成功，请到F盘根目录查看" );
         Runtime runtime = Runtime.getRuntime();
         runtime.exec("cmd /k f:\\"+ sb.toString());
     }

@@ -81,6 +81,13 @@ public class SellerDAOImpl implements SellerDAO {
         return convertSeller(entity);
     }
 
+    /**
+     * 根据用户输入的密码来查询数据库中是否存在，用来判定用户输入
+     * 旧密码是否正确
+     * @param password
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Seller getPasswordByWork_id(String password) throws SQLException {
         Entity entity = Db.use().queryOne("select * from t_seller where password = ?" ,password);
