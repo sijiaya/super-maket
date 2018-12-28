@@ -21,4 +21,24 @@ public class SellerServiceImpl implements SellerService {
         }
         return sellerList;
     }
+
+    @Override
+    public Long addSeller(Seller seller) {
+        long result = 0;
+        try {
+            result = sellerDAO.insertSeller(seller);
+        } catch (SQLException e) {
+            System.err.println("新增收银员出现异常");
+        }
+        return result;
+    }
+
+    @Override
+    public void deleteSeller(long id) {
+        try {
+            sellerDAO.deleteSeller(id);
+        } catch (SQLException e) {
+            System.err.println("删除收银员信息失败");
+        }
+    }
 }

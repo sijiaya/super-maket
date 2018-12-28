@@ -5,11 +5,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.security.PublicKey;
 import java.util.ResourceBundle;
 
 public class MainController  implements Initializable {
@@ -45,7 +47,10 @@ public class MainController  implements Initializable {
     public void listSeller() throws Exception{
         switchView("seller.fxml");
     }
-    public void listMember() throws Exception{
+    public void backup() throws Exception {
+        switchView("backup.fxml");
+    }
+    public void listMember() throws Exception {
         switchView("member.fxml");
     }
 

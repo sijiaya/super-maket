@@ -4,9 +4,12 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.SellerController">
+    <Button styleClass="btn-basic,green-theme" text="添加收银员" onAction="#addSeller"/>
+
     <padding>
         <Insets left="10" top="50"/>
     </padding>

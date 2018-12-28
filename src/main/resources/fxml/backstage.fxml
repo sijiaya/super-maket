@@ -68,16 +68,10 @@
                                 <Button text="统计分析" styleClass="btn-second"/>
                             </VBox>
                         </TitledPane>
-                        <TitledPane alignment="TOP_LEFT" text="借阅管理">
-                            <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
-                                <Button text="借阅查询" styleClass="btn-second"/>
-                                <Button text="统计分析" styleClass="btn-second"/>
-                            </VBox>
-                        </TitledPane>
                         <TitledPane alignment="TOP_LEFT" text="系统维护">
                             <VBox minHeight="130" spacing="10"  styleClass="dark-theme">
                                 <Button text="系统初始化" styleClass="btn-second"/>
-                                <Button text="数据备份" styleClass="btn-second"/>
+                                <Button text="数据备份" styleClass="btn-second" onAction="#backup"/>
                                 <Button text="主题设置" styleClass="btn-second"/>
                             </VBox>
                         </TitledPane>

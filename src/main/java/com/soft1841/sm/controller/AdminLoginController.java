@@ -51,6 +51,9 @@ public class AdminLoginController {
             Stage mainStage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
             BorderPane root = fxmlLoader.load();
+            MainController controller = fxmlLoader.getController();
+            //将当前主舞台传递给控制器对象
+            controller.setPrimaryStage(primaryStage);
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
             mainStage.getIcons().add(new Image("/img/logo.png"));

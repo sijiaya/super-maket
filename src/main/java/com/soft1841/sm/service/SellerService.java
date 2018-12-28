@@ -11,4 +11,16 @@ public interface SellerService {
      * @return
      */
     List<Seller>  getAllSellers();
+
+    /**
+     * 新增收银员
+     * @param Seller
+     * @return
+     */
+    Long addSeller(Seller Seller);
+    /**
+     * 根据id删除收银员
+     * @param id
+     */
+    void deleteSeller(long id);
 }

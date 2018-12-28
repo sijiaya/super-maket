@@ -22,4 +22,19 @@ public class SellerDAOTest {
         sellerList.forEach(seller -> System.out.println(seller));
     }
 
+    @Test
+    public void insertSeller() throws SQLException {
+        Seller seller = new Seller();
+        seller.setWork_id(Long.valueOf(1));
+        seller.setPassword("123456");
+        seller.setName("测试");
+        seller.setAvatar("https://hhhhh.com/jph");
+        seller.setAddress("山西");
+        System.out.println(sellerDAO.insertSeller(seller));
+    }
+
+    @Test
+    public void deleteSeller() throws SQLException {
+        sellerDAO.deleteSeller(Long.valueOf(5));
+    }
 }

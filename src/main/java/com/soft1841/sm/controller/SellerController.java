@@ -5,18 +5,23 @@ import com.soft1841.sm.service.SellerService;
 import com.soft1841.sm.utils.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 
+import javax.xml.soap.Text;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class SellerController implements Initializable {
@@ -55,15 +60,68 @@ public class SellerController implements Initializable {
             leftBox.getChildren().addAll(imageView, nameLabel);
             //右边垂直布局放家庭住址
             VBox rightBox = new VBox();
-            rightBox.setSpacing(15);
+            rightBox.setSpacing(50);
             Label addressLabel = new Label("籍贯："+seller.getAddress());
             nameLabel.getStyleClass().add("font-title");
-            rightBox.getChildren().addAll(addressLabel);
+            Button delButton = new Button("删除");
+            delButton.getStyleClass().add("warning-theme");
+            rightBox.getChildren().addAll(addressLabel,delButton);
+            delButton.setOnAction(event -> {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("确认对话框");
+                alert.setContentText("确定要删除这行记录吗?");
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    long id = seller.getId();
+                    //删除掉这行记录
+                    sellerService.deleteSeller(id);
+                    //从流式面板移除当前这个人的布局
+                    flowPane.getChildren().remove(hBox);
+                }
+            });
             //左右两个垂直布局加入水平布局
             hBox.getChildren().addAll(leftBox, rightBox);
             //水平布局加入大的内容容器
             flowPane.getChildren().add(hBox);
         }
+    }
+    public void addSeller(){
+        Stage stage = new Stage();
+       VBox vBox = new VBox();
+       vBox.setSpacing(20);
+       vBox.setPadding(new Insets(20,20,20,20));
+        TextField textField = new TextField("收银员工号");
+        TextField textField1 = new TextField("登录密码");
+        TextField textField2 = new TextField("收银员姓名");
+        TextField textField3 = new TextField("收银员头像");
+        TextField textField4 = new TextField("收银员地址");
+        Button button = new Button("确认添加");
+        vBox.getChildren().addAll(textField,textField1,textField2,textField3,textField4,button);
+        button.setOnAction(event -> {
+            Seller seller = new Seller();
+            String work_id = textField.getText();
+            String password = textField1.getText();
+            String name = textField2.getText();
+            String avatar = textField3.getText();
+            String address = textField4.getText();
+            seller.setWork_id(Long.valueOf(work_id));
+            seller.setPassword(password);
+            seller.setName(name);
+            seller.setAvatar(avatar);
+            seller.setAddress(address);
+            long id = 0;
+            id = sellerService.addSeller(seller);
+            seller.setId(id);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("添加成功");
+            alert.show();
+            stage.close();
+            sellerList = sellerService.getAllSellers();
+            showSellers(sellerList);
+        });
+        Scene scene = new Scene(vBox);
+        stage.setScene(scene);
+        stage.show();
     }
 }
 
