@@ -19,7 +19,7 @@ public class MemberServiceTest {
 
     @Test
     public void deleteMemberById(){
-        memberService.deleteMember(22);
+        memberService.deleteMember(25);
     }
 
     @Test
