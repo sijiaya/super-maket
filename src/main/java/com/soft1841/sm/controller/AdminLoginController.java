@@ -13,8 +13,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import sun.plugin.javascript.navig.Anchor;
 
 import java.io.IOException;
 
@@ -50,7 +52,7 @@ public class AdminLoginController {
             primaryStage.close();
             Stage mainStage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
-            BorderPane root = fxmlLoader.load();
+            AnchorPane root = fxmlLoader.load();
             MainController controller = fxmlLoader.getController();
             //将当前主舞台传递给控制器对象
             controller.setPrimaryStage(primaryStage);

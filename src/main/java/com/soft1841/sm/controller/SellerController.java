@@ -73,6 +73,7 @@ public class SellerController implements Initializable {
             rightBox.getChildren().addAll(addressLabel, delButton, updateButton);
             updateButton.setOnAction(event -> {
                 Stage stage = new Stage();
+                stage.setTitle("修改密码");
                 VBox vBox = new VBox();
                 vBox.setSpacing(30);
                 vBox.setPadding(new Insets(20,20,20,20));
