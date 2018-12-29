@@ -17,7 +17,7 @@ public class AdminLoginApp extends Application {
         AdminLoginController controller = fxmlLoader.getController();
         //将当前主舞台传递给控制器对象
         controller.setPrimaryStage(primaryStage);
-        Scene scene = new Scene(root,550,680);
+        Scene scene = new Scene(root,590,680);
         scene.getStylesheets().add("/css/style.css");
         primaryStage.setScene(scene);
         primaryStage.show();

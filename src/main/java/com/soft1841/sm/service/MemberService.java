@@ -10,7 +10,7 @@ public interface MemberService {
      * @param member
      * @return
      */
-    Member addMember(Member member);
+    Long addMember(Member member);
 
     /**
      * 获取所有会员
@@ -18,9 +18,21 @@ public interface MemberService {
      */
     List<Member> getAllMember();
 
+
+
+    /**
+     * 根据会员号查询会员
+     * @param number
+     * @return
+     */
+    Member getMember(long number);
+
+
+    void updateMember(Member member);
+
     /**
      * 根据会员号删除
      * @param number
      */
-    void deleteMember(long number);
+    void deleteMember(String number);
 }

@@ -21,7 +21,6 @@ public class ServiceFactory {
         return new MemberServiceImpl();
     }
     public static SellerService getSellersServiceInstance(){return new SellerServiceImpl();}
-    public static MemberService getMemberInstance(){return new MemberServiceImpl();}
 }
 
 

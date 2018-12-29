@@ -3,8 +3,6 @@ package com.soft1841.sm.controller;
 import com.soft1841.sm.entity.Admin;
 import com.soft1841.sm.service.AdminService;
 import com.soft1841.sm.utils.ServiceFactory;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -21,6 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * 管理员信息控制器
+ */
 public class AdminController implements Initializable {
    @FXML
    private FlowPane flowPane;
@@ -66,4 +67,4 @@ showAdmins(adminList);
             flowPane.getChildren().add(hBox);
         }
     }
-    }
+}

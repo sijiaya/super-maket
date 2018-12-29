@@ -59,6 +59,7 @@ public class SellerController implements Initializable {
             imageView.setClip(circle);
             Label nameLabel = new Label("姓名:" + seller.getName());
             leftBox.getChildren().addAll(imageView, nameLabel);
+
             //右边垂直布局放家庭住址
             VBox rightBox = new VBox();
             rightBox.setSpacing(50);

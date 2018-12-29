@@ -35,7 +35,7 @@ public class BackUpController implements Initializable {
         sb.append(" "+dbName+" >");
         sb.append(pathSql);
         Runtime runtime = Runtime.getRuntime();
-        runtime.exec("cmd /k f:\\"+ sb.toString());
+        runtime.exec("cmd /k d:\\"+ sb.toString());
     }
 
 
@@ -43,7 +43,7 @@ public class BackUpController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         String backName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date())+".sql";
         try {
-            BackUpController.dbBackUp("root","root","db_supermarket","F:/",backName);
+            BackUpController.dbBackUp("root","root","db_supermarket","d:/",backName);
         } catch (Exception e) {
             e.printStackTrace();
         }

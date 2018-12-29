@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.List;
 
 public class MemberServiceTest {
-    private MemberService memberService = ServiceFactory.getMemberInstance();
+    private MemberService memberService = ServiceFactory.getMemberServiceInstance();
 
 
     @Test
@@ -19,18 +19,27 @@ public class MemberServiceTest {
 
     @Test
     public void deleteMemberById(){
-        memberService.deleteMember(25);
+        memberService.deleteMember("2019007");
     }
 
     @Test
     public void insertMember(){
         Member member = new Member();
-        member.setNumber(20180404);
+        member.setNumber("20180404");
         member.setName("李四");
-        member.setAddress("浙江温州");
+        member.setAddress("浙江省温州市");
         member.setPhone("241475215");
         member.setIntegral("67");
         System.out.println(memberService.addMember(member));
     }
 
+    @Test
+    public void updateMember(){
+        Member member = new Member();
+        member.setId(27);
+        member.setAddress("浙江省杭州市");
+        member.setPhone("18023424355");
+        member.setIntegral("150");
+        memberService.updateMember(member);
+    }
 }

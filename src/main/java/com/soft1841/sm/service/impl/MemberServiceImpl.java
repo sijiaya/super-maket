@@ -1,11 +1,9 @@
 package com.soft1841.sm.service.impl;
 
-import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.dao.MemberDAO;
 import com.soft1841.sm.entity.Member;
 import com.soft1841.sm.service.MemberService;
 import com.soft1841.sm.utils.DAOFactory;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -22,14 +20,14 @@ public class MemberServiceImpl implements MemberService {
      * @return
      */
     @Override
-    public Member addMember(Member member) {
+    public Long addMember(Member member) {
         long result = 0;
         try {
             result = memberDAO.insertMember(member);
         }catch (SQLException e){
             System.err.println("新增会员出现异常");
         }
-        return member;
+        return result;
     }
 
     /**
@@ -49,12 +47,42 @@ public class MemberServiceImpl implements MemberService {
     }
 
     /**
+     * 根据会员号查询会员
+     *
+     * @param number
+     * @return
+     */
+    @Override
+    public Member getMember(long number) {
+        Member member = new Member();
+        try {
+            member = memberDAO.getMemberByNumber(number);
+        }catch (SQLException e){
+            System.err.println("根据会员号查询会员信息");
+        }
+        return member;
+    }
+
+    /**
+     * 修改会员信息
+     * @param member
+     */
+    @Override
+    public void updateMember(Member member) {
+        try {
+            memberDAO.updateMember(member);
+        } catch (SQLException e) {
+            System.err.println("修改会员信息出现异常");
+        }
+    }
+
+    /**
      * 根据会员号删除
      *
      * @param number
      */
     @Override
-    public void deleteMember(long number) {
+    public void deleteMember(String number) {
         try {
             memberDAO.deleteMemberById(number);
         }catch (SQLException e){
