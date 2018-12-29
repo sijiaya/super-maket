@@ -67,6 +67,17 @@ public class GoodsServiceImpl implements GoodsService {
             System.err.println("删除图书出现异常");
         }
     }
+
+    @Override
+    public int countByType(long typeId) {
+        int result = 0;
+        try {
+            result = goodsDAO.countByType(typeId);
+        } catch (SQLException e) {
+            System.err.println("根据类别统计图书信息出现异常");
+        }
+        return result;
+    }
 }
 
 
