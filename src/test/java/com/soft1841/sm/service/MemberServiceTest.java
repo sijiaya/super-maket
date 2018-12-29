@@ -42,4 +42,8 @@ public class MemberServiceTest {
         member.setIntegral("150");
         memberService.updateMember(member);
     }
+@Test
+    public void countByIntegral(){
+        memberService.countByIntegral(70);
+}
 }

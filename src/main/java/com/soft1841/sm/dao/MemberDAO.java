@@ -47,4 +47,14 @@ public interface MemberDAO {
      */
     int deleteMemberById(String number) throws SQLException;
 
+    /**
+     *
+     * @param integral
+     * @return
+     * @throws SQLException
+     */
+    int countByIntegral(int integral)throws SQLException;
+
+
+
 }

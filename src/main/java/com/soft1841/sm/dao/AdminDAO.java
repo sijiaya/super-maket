@@ -55,4 +55,12 @@ public interface AdminDAO {
      * @throws SQLException
      */
     Admin getUserByName(Integer job_id) throws SQLException;
+
+    /**
+     *
+     * @param address
+     * @return
+     * @throws SQLException
+     */
+    int countByAddress(String address) throws SQLException;
 }

@@ -96,4 +96,13 @@ public class MemberDAOImpl implements MemberDAO {
                 Entity.create("t_member").set("number", number)
         );
     }
+
+    @Override
+    public int countByIntegral(int integral) throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_member WHERE integral = ? ", integral).intValue();
+    }
+
+
+
+
 }

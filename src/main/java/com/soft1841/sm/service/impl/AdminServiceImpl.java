@@ -21,4 +21,15 @@ public class AdminServiceImpl implements AdminService {
         }
         return adminList;
     }
+
+    @Override
+    public int countByAddress(String address) {
+        int result = 0;
+        try {
+            result = adminDAO.countByAddress(address);
+        } catch (SQLException e) {
+            System.err.println("根据地址统计管理员信息出现异常");
+        }
+        return result;
+    }
 }

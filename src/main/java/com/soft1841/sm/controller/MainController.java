@@ -52,6 +52,9 @@ public class MainController  implements Initializable {
     public void listCount() throws Exception {
         switchView("type_analysis.fxml");
     }
+    public void listUser() throws Exception{
+        switchView("admin_analysis.fxml");
+    }
 
 
     //封装一个切换视图的方法，用来根据fxml文件切换视图内容

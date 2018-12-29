@@ -35,4 +35,12 @@ public interface MemberService {
      * @param number
      */
     void deleteMember(String number);
+
+    /**
+     *
+     * @param integral
+     * @return
+     */
+    int countByIntegral(int integral);
+
 }

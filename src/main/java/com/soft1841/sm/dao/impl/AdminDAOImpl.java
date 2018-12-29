@@ -60,6 +60,12 @@ public class AdminDAOImpl implements AdminDAO {
         //使用convertAdmin方法将entity型转为Admin
         return convertAdmin(entity);
     }
+
+    @Override
+    public int countByAddress(String address) throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_admin WHERE address = ? ", address).intValue();
+    }
+
     private Admin convertAdmin(Entity entity){
         //给Admin定义数据库中的列名
         Admin admin = new Admin(entity.getInt("id"),

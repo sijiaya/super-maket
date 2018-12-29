@@ -58,7 +58,7 @@
                         <Button mnemonicParsing="false" text="销售员"   onAction="#listSeller" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
                         <Button mnemonicParsing="false" text="管理员" onAction="#listAdmin" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
                         <Button mnemonicParsing="false" text="会员"  onAction="#listMember" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10" />
-                        <Button mnemonicParsing="false" text="统计"  styleClass="bark-theme,btn-basic,btn-radius-normal"/>
+                        <Button mnemonicParsing="false" text="统计" onAction="#listUser" styleClass="bark-theme,btn-basic,btn-radius-normal"/>
                     </VBox>
                   </content>
                 </TitledPane>
