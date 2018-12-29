@@ -41,4 +41,8 @@ public class MemberDAOTest {
         member.setIntegral("150");
         memberDAO.updateMember(member);
     }
+    @Test
+    public void countByInIntegral() throws SQLException {
+int n= memberDAO.countByIntegral(70);
+    }
 }

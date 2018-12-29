@@ -1,6 +1,5 @@
 package com.soft1841.sm.entity;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -15,18 +14,6 @@ public class Member {
     public Member() {
     }
 
-    public String getIntegral() {
-        return integral.get();
-    }
-
-    public SimpleStringProperty integralProperty() {
-        return integral;
-    }
-
-    public void setIntegral(String integral) {
-        this.integral.set(integral);
-    }
-
     public long getId() {
         return id.get();
     }
@@ -37,6 +24,18 @@ public class Member {
 
     public void setId(long id) {
         this.id.set(id);
+    }
+
+    public String getNumber() {
+        return number.get();
+    }
+
+    public SimpleStringProperty numberProperty() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number.set(number);
     }
 
     public String getName() {
@@ -75,27 +74,15 @@ public class Member {
         this.phone.set(phone);
     }
 
-    public String getNumber() {
-        return number.get();
+    public String getIntegral() {
+        return integral.get();
     }
 
-    public SimpleStringProperty numberProperty() {
-        return number;
+    public SimpleStringProperty integralProperty() {
+        return integral;
     }
 
-    public void setNumber(String number) {
-        this.number.set(number);
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", number=" + number +
-                ", name=" + name +
-                ", address=" + address +
-                ", phone=" + phone +
-                ", integral=" + integral +
-                '}';
+    public void setIntegral(String integral) {
+        this.integral.set(integral);
     }
 }

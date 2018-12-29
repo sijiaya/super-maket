@@ -10,4 +10,11 @@ public interface AdminService {
      * @return
      */
     List<Admin> getAllAdmins();
+
+    /**
+     *
+     * @param address
+     * @return
+     */
+    int countByAddress(String address);
 }

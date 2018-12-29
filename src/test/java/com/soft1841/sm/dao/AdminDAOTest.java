@@ -16,4 +16,10 @@ public class AdminDAOTest {
         List<Admin> adminList = adminDAO.selectAllAdmin();
         adminList.forEach(admin -> System.out.println(admin));
     }
+
+    @Test
+    public void countByAddress()throws SQLException{
+        int n = adminDAO.countByAddress("山西");
+        System.out.println(n);
+    }
 }
