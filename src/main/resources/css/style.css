@@ -2,12 +2,6 @@
 .root {
     -fx-font-size: 14px;
 }
-.bg1-theme{
-    -fx-background-color: rgb(204,204,204);
-}
-.bg-theme{
-    -fx-background-color: rgb(55, 143, 191);
-}
 /*对其靠左样式*/
 .btn-second{
     /*按钮背景颜色*/
@@ -217,6 +211,6 @@
 
 /*风琴标题面板背景色*/
 .titled-pane > .title {
-    -fx-background-color: rgb(55, 143, 191);
-    -fx-padding: 30 10 10 10;
+    -fx-background-color:rgb(55,143,191);
+    -fx-padding:30 10 10 10;
 }
