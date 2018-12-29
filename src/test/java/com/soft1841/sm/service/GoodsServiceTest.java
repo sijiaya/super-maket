@@ -39,4 +39,10 @@ public class GoodsServiceTest {
     public void deleteGoods() {
         goodsService.deleteGoods(10);
     }
+
+    @Test
+   public  void countType(){
+    goodsService.countByType(1);
+    }
 }
+

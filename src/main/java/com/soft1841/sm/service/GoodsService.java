@@ -46,5 +46,6 @@ public interface GoodsService {
      * @param id
      */
     void deleteGoods(long id);
+    int countByType(long typeId);
 }
 

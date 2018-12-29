@@ -37,4 +37,10 @@ public class GoodsDAOTest {
         List<Goods> goodsList = goodsDAO.selectGoodLike("苹");
         goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
+
+    @Test
+    public void countByType()throws SQLException{
+        int n = goodsDAO.countByType(1);
+        System.out.println(n);
+    }
 }

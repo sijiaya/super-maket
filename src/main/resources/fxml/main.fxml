@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.MainController" styleClass="green-theme">
+    <Label text="天庭神界超市管理系统" onMouseClicked="#listDefault" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="260">
+
+        <font>
+            <Font name="System Bold" size="30.0"/>
+        </font>
+    </Label>
+    <ImageView fitHeight="45" fitWidth="45" AnchorPane.topAnchor="15" AnchorPane.rightAnchor="120" >
+        <Image url="/img/my.png"/>
+    </ImageView>
+    <Button text="退出系统" onAction="#close" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" styleClass="btn-radius-normal,warm-theme"/>
+    <HBox prefHeight="90.0" prefWidth="550.0" AnchorPane.leftAnchor="0.0"  AnchorPane.topAnchor="0.0" styleClass="green-theme">
+         <Accordion >
+              <panes>
+                <TitledPane  animated="false" text="类别管理">
+                  <content>
+                      <VBox minHeight="100" spacing="5"  >
+                          <Button mnemonicParsing="false" text="类别查询" onAction="#listType" styleClass="bark-theme,btn-basic,btn-radius-normal"  prefHeight="10"/>
+                          <Button mnemonicParsing="false" text="统计分析" onAction="#listCount"  styleClass ="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                       </VBox>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" text="商品管理">
+                  <content>
+                      <VBox   minHeight="100" spacing="5" >
+                          <Button mnemonicParsing="false" text="商品信息" onAction="#listGoods" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                          <Button mnemonicParsing="false" text="统计分析"  styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                      </VBox>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" text="用户管理">
+                  <content>
+                    <VBox  minHeight="100" spacing="5"  >
+                        <Button mnemonicParsing="false" text="销售员"   onAction="#listSeller" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                        <Button mnemonicParsing="false" text="管理员" onAction="#listAdmin" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                        <Button mnemonicParsing="false" text="会员"  onAction="#listMember" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10" />
+                        <Button mnemonicParsing="false" text="统计"  styleClass="bark-theme,btn-basic,btn-radius-normal"/>
+                    </VBox>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Accordion>
+               <panes>
+                  <TitledPane animated="false" text="系统维护">
+                     <content>
+                         <VBox  minHeight="100" spacing="5" >
+                              <Button mnemonicParsing="false" text="备份"  onAction="#backup" styleClass="bark-theme,btn-basic,btn-radius-normal"/>
+                         </VBox>
+                     </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+      </HBox>
+    <StackPane fx:id="MainController" prefHeight="290.0" AnchorPane.bottomAnchor="0"  AnchorPane.topAnchor="160" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" prefWidth="579.0" styleClass="green-theme" >
+             <fx:include source="default.fxml"/>
+    </StackPane>
+</AnchorPane>

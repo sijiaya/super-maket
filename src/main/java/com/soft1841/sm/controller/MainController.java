@@ -49,11 +49,13 @@ public class MainController  implements Initializable {
     public void listMember() throws Exception {
         switchView("member.fxml");
     }
-
+    public void listCount() throws Exception {
+        switchView("type_analysis.fxml");
+    }
 
 
     //封装一个切换视图的方法，用来根据fxml文件切换视图内容
-    private void switchView(String fileName) throws Exception {
+    public void switchView(String fileName) throws Exception {
         //清除主面板之前内容
         ObservableList<Node> list = MainController.getChildren();
         MainController.getChildren().removeAll(list);

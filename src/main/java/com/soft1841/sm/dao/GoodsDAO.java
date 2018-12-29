@@ -51,5 +51,13 @@ public interface GoodsDAO {
      */
     int deleteGoodsById(long id) throws SQLException;
 
+    /**
+     *
+     * @param typeId
+     * @return
+     * @throws SQLException
+     */
+    int countByType( long typeId) throws SQLException;
+
 
 }

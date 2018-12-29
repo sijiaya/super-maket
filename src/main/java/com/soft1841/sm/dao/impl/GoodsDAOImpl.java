@@ -72,6 +72,11 @@ public  class GoodsDAOImpl implements GoodsDAO {
         );
     }
 
+    @Override
+    public int countByType(long typeId) throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_goods WHERE type_id = ? ", typeId).intValue();
+    }
+
     private Goods convertGoods(Entity entity) {
         Goods goods = new Goods();
         goods.setId(entity.getLong("id"));
