@@ -53,7 +53,7 @@ public class MainController  implements Initializable {
         switchView("type_analysis.fxml");
     }
     public void listUser() throws Exception{
-        switchView("admin_analysis.fxml");
+        switchView("first.fxml");
     }
 
 
