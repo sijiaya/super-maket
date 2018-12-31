@@ -1,164 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--系统收银fxml
 @Author LiuLian-->
 
-<?import java.lang.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="881.0" prefWidth="1247.0" style="-fx-background-color: #88d3f8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutY="-8.0" prefHeight="44.0" prefWidth="1247.0" style="-fx-background-color: #365efb;" textFill="#e0e0de" />
-      <AnchorPane layoutY="29.0" prefHeight="131.0" prefWidth="1247.0" style="-fx-background-color: #41b6f4;">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="1009.0"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml" fx:controller="com.soft1841.sm.controller.XtsyController">
+   <center>
+      <AnchorPane  BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView >
                <image>
-                  <Image url="/img/a.png" />
+                  <Image url="/img/blue.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="103.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/b.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="56.0" fitWidth="55.0" layoutX="188.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/c.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="272.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/d.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="872.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/e.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="427.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/f.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="49.0" layoutX="501.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/g.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="577.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/h.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="651.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/i.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="723.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/j.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="61.0" layoutX="798.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/k.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="347.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/l.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="938.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="/img/m.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER" layoutX="999.0" layoutY="1.0" prefHeight="115.0" prefWidth="248.0" text="TTSJ 收银系统">
+            <TableView  fx:id="goodTable" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="10"
+            AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="170">
+               <columns>
+               <TableColumn text="ID">
+                  <cellValueFactory>
+                     <PropertyValueFactory property="id"/>
+                  </cellValueFactory>
+               </TableColumn>
+                  <TableColumn text="barcoode">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="barcode"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="name">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="price">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="price"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="vip">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="vip"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn text="数量"/>
+                  <TableColumn text="小计"/>
+               </columns>
+
+
+            </TableView>
+            <Label text="数量（件）：" AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="112" textFill="DEEPSKYBLUE">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="2.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="商品管理" />
-            <Button layoutX="88.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="拉取管理" />
-            <Button layoutX="171.0" layoutY="76.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #88d3f8;" text="商品销售" />
-            <Button layoutX="257.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="销售单" />
-            <Button layoutX="325.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="库区管理" />
-            <Button layoutX="413.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="会员管理" />
-            <Button layoutX="512.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="挂单" />
-            <Button layoutX="574.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="取单" />
-            <Button layoutX="644.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="交班" />
-            <Button layoutX="716.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="设置" />
-            <Button layoutX="782.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="帮助" />
-            <Button layoutX="850.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="订单管理" />
-            <Button layoutX="938.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #88d3f8;" text="进货" />
+            <TextField AnchorPane.bottomAnchor="110" AnchorPane.leftAnchor="140" prefHeight="31.0" prefWidth="113.0" />
+            <Label AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="70" prefHeight="31.0" prefWidth="231.0" text="                网络正常" textFill="#616161">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/12.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button AnchorPane.leftAnchor="270" AnchorPane.bottomAnchor="80" prefHeight="61.0" prefWidth="85.0" style="-fx-background-color: #00BFFF;" text="移除商品" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField  fx:id="barcodeField" onKeyPressed="#search" AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="25" prefHeight="39.0" prefWidth="347.0" promptText="条形码/商品名称">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField AnchorPane.leftAnchor="400" AnchorPane.bottomAnchor="110" prefHeight="29.0" prefWidth="161.0" promptText="会员号" />
+            <TextField AnchorPane.leftAnchor="400" AnchorPane.bottomAnchor="75" prefHeight="30.0" prefWidth="80.0" promptText="本次积分" />
+            <TextField AnchorPane.leftAnchor="490" AnchorPane.bottomAnchor="75" prefHeight="30.0" prefWidth="72.0" promptText="总积分" />
+            <Button AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="400" mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;" text="新增会员" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="600" mnemonicParsing="false" prefHeight="117.0" prefWidth="71.0" style="-fx-background-color: #00BFFF;" text="结&#10;算" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Label AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="700"  prefHeight="47.0" prefWidth="111.0" text="总金额：" textFill="DEEPSKYBLUE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="800" prefHeight="40.0" prefWidth="129.0" />
+            <Label AnchorPane.bottomAnchor="92" AnchorPane.leftAnchor="700" text="收   款：" textFill="DEEPSKYBLUE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField AnchorPane.bottomAnchor="90" AnchorPane.leftAnchor="800" prefHeight="38.0" prefWidth="131.0" />
+            <Button AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="960" mnemonicParsing="false" prefHeight="113.0" prefWidth="58.0" style="-fx-background-color: #00BFFF;" text="找&#10;零" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button AnchorPane.bottomAnchor="25" AnchorPane.leftAnchor="1050" mnemonicParsing="false" prefHeight="114.0" prefWidth="56.0" style="-fx-background-color: #00BFFF;" text="打&#10;印&#10;小&#10;票" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+             <Label AnchorPane.bottomAnchor="35" AnchorPane.rightAnchor="10"   text="天庭神界连锁超市   " textFill="DEEPSKYBLUE"  >
+                 <font>
+                     <Font  size="80" />
+                 </font>
+             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="18.0" layoutY="217.0" prefHeight="480.0" prefWidth="1210.0" style="-fx-background-color: #e0e0de;" />
-      <Label layoutX="68.0" layoutY="725.0" text="数量（件)：" />
-      <Button layoutX="288.0" layoutY="720.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="80.0" style="-fx-background-color: #41b6f4;" text="移除商品" textFill="#390606" />
-      <Button layoutX="374.0" layoutY="722.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="84.0" style="-fx-background-color: #41b6f4;" text="网上订单" />
-      <TextField layoutX="109.0" layoutY="798.0" prefHeight="36.0" prefWidth="359.0" text="条形码/商品名称" />
-      <TextField layoutX="150.0" layoutY="720.0" prefHeight="43.0" prefWidth="125.0" />
-      <Label layoutX="309.0" layoutY="763.0" text="Delete" />
-      <Label alignment="CENTER_RIGHT" layoutX="437.0" layoutY="798.0" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #41b6f4;" text="F2" />
-      <TextField layoutX="523.0" layoutY="727.0" />
-      <TextField layoutX="522.0" layoutY="770.0" />
-      <TextField layoutX="523.0" layoutY="808.0" prefHeight="30.0" prefWidth="105.0" />
-      <TextField layoutX="628.0" layoutY="808.0" prefHeight="30.0" prefWidth="99.0" />
-      <TextField layoutX="727.0" layoutY="808.0" prefHeight="30.0" prefWidth="105.0" />
-      <Button layoutX="745.0" layoutY="730.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="84.0" style="-fx-background-color: #41b6f4;" text="新增会员" />
-      <Label layoutX="779.0" layoutY="773.0" text="F3" />
-      <Button layoutX="935.0" layoutY="726.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="69.0" style="-fx-background-color: #41b6f4;" text="结算">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="1020.0" layoutY="725.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="202.0" style="-fx-background-color: #41b6f4;" text="总金额">
-         <font>
-            <Font size="37.0" />
-         </font>
-      </Button>
-      <Label layoutX="932.0" layoutY="808.0" text="（空格键）" />
-      <Label layoutX="1102.0" layoutY="813.0" text="0.00元" />
-      <Button layoutX="68.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品名称">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="228.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品条形码">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="407.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品现价">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="572.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品原价">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="729.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品规格">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="890.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="商品数量">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="1064.0" layoutY="172.0" mnemonicParsing="false" style="-fx-background-color: #41b6f4;" text="小计（元）">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-   </children>
-</AnchorPane>
+   </center>
+</BorderPane>

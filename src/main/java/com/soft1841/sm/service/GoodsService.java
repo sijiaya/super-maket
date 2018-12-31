@@ -34,6 +34,13 @@ public interface GoodsService {
 
     /**
      *
+     * @param barcode
+     * @return
+     */
+    List<Goods> getGoodsByBarcode(long barcode);
+
+    /**
+     *
      * @param keywords
      * @return
      */

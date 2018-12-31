@@ -48,6 +48,17 @@ public  class GoodsDAOImpl implements GoodsDAO {
     }
 
     @Override
+    public List<Goods> selectGoodsByBarcode(Long barcode) throws SQLException {
+        List<Entity> entityList = Db.use().query("SELECT * FROM t_goods WHERE barcode = ? ",barcode);
+        List<Goods> goodsList = new ArrayList<>();
+        for (Entity entity:entityList
+        ) {
+            goodsList.add(convertGoods(entity));
+        }
+        return goodsList;
+    }
+
+    @Override
     public List<Goods> selectGoodLike(String keywords) throws SQLException {
         List<Entity> entityList=Db.use().findLike("t_goods","name",keywords, Condition.LikeType.Contains);
         List<Goods> goodsList = new ArrayList<>();

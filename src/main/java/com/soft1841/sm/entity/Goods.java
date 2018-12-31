@@ -128,5 +128,18 @@ public class Goods {
         this.inventory.set(inventory);
     }
 
-
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", typeId=" + typeId +
+                ", barcode=" + barcode +
+                ", name=" + name +
+                ", price=" + price +
+                ", vip=" + vip +
+                ", description=" + description +
+                ", picture=" + picture +
+                ", inventory=" + inventory +
+                '}';
     }
+}

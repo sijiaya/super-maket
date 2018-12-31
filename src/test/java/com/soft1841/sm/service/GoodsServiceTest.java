@@ -44,5 +44,9 @@ public class GoodsServiceTest {
    public  void countType(){
     goodsService.countByType(1);
     }
+    @Test
+    public void getGoodsByBarcode(){
+        System.out.println(goodsService.getGoodsByBarcode(1003257401));
+    }
 }
 

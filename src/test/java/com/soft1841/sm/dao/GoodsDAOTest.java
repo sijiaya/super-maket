@@ -33,6 +33,11 @@ public class GoodsDAOTest {
 
     }
     @Test
+    public void selectGoodsByBarcode()throws SQLException{
+        List<Goods> goodsList = goodsDAO.selectGoodsByBarcode((long) 1003257401);
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
+    }
+    @Test
     public void selectGoodsLike() throws SQLException {
         List<Goods> goodsList = goodsDAO.selectGoodLike("苹");
         goodsList.forEach(goods -> System.out.println(goods.getName()));
