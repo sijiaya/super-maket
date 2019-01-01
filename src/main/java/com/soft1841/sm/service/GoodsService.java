@@ -53,6 +53,14 @@ public interface GoodsService {
      * @param id
      */
     void deleteGoods(long id);
+
+    /**
+     *  根据商品类别统计
+     * @param typeId
+     * @return
+     */
+
     int countByType(long typeId);
+    void updateGoods(Goods goods);
 }
 

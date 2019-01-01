@@ -48,4 +48,13 @@ public class GoodsDAOTest {
         int n = goodsDAO.countByType(1);
         System.out.println(n);
     }
+    @Test
+    public void updategoods()throws SQLException{
+        Goods goods= new Goods();
+        goods.setBarcode(1003257401);
+        goods.setNumber(1);
+        goods.setSubtotal(39.8);
+        goodsDAO.updategoods(goods);
+
+    }
 }

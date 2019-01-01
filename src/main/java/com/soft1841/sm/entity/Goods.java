@@ -15,10 +15,11 @@ public class Goods {
     private final SimpleStringProperty description = new SimpleStringProperty("");
     private final SimpleStringProperty picture = new SimpleStringProperty("");
     private final SimpleIntegerProperty inventory=new SimpleIntegerProperty();
+    private final SimpleLongProperty number=new SimpleLongProperty();
+    private final SimpleDoubleProperty subtotal = new SimpleDoubleProperty();
 
     public Goods() {
     }
-
 
     public long getId() {
         return id.get();
@@ -128,6 +129,30 @@ public class Goods {
         this.inventory.set(inventory);
     }
 
+    public long getNumber() {
+        return number.get();
+    }
+
+    public SimpleLongProperty numberProperty() {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number.set(number);
+    }
+
+    public double getSubtotal() {
+        return subtotal.get();
+    }
+
+    public SimpleDoubleProperty subtotalProperty() {
+        return subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal.set(subtotal);
+    }
+
     @Override
     public String toString() {
         return "Goods{" +
@@ -140,6 +165,9 @@ public class Goods {
                 ", description=" + description +
                 ", picture=" + picture +
                 ", inventory=" + inventory +
+                ", number=" + number +
+                ", subtotal=" + subtotal +
                 '}';
     }
 }
+

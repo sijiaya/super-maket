@@ -48,5 +48,13 @@ public class GoodsServiceTest {
     public void getGoodsByBarcode(){
         System.out.println(goodsService.getGoodsByBarcode(1003257401));
     }
+    @Test
+    public void upgategoods(){
+       Goods goods=new Goods();
+       goods.setBarcode(1003257401);
+       goods.setSubtotal(39.8);
+       goods.setNumber(1);
+       goodsService.updateGoods(goods);
+    }
 }
 

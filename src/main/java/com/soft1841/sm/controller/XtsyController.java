@@ -9,6 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -23,6 +24,10 @@ public class XtsyController implements Initializable{
     private TableView<Goods> goodTable;
     @FXML
     private TextField barcodeField;
+    @FXML
+    private Button dBtn;
+    @FXML
+    private TextField numberTextField;
     private ObservableList<Type> typeData = FXCollections.observableArrayList();
     private TypeService typeService = ServiceFactory.getTypeServiceInstance();
     private ObservableList<Goods> goodsData = FXCollections.observableArrayList();
@@ -54,6 +59,33 @@ public class XtsyController implements Initializable{
             String barcode = barcodeField.getText().trim();
             goodsList=  goodsService.getGoodsByBarcode(Long.parseLong(barcode));
             showGoodsData(goodsList);
+
+        }
+    }
+    public void delete(KeyEvent event){
+        double x= dBtn.getLayoutX();
+        double y= dBtn.getLayoutY();
+        KeyCode keyCode = event.getCode();
+        if (keyCode==KeyCode.DELETE);{
+         System.out.println("删除");
+
+        }
+    }
+    public void number(KeyEvent event){
+        double x = numberTextField.getLayoutX();
+        double y =numberTextField.getLayoutY();
+        KeyCode keyCode = event.getCode();
+        if (keyCode ==KeyCode.SPACE){
+            Goods goods=new Goods();
+            String barcode = barcodeField.getText().trim();
+            String number =numberTextField.getText().trim();
+            Double P= goods.getPrice();
+            Double p=Double.parseDouble(number)*39.8;
+            goods.setBarcode(Long.parseLong(barcode));
+            goods.setNumber(Long.parseLong(number));
+            goods.setSubtotal(p);
+           goodsService.updateGoods(goods);
+
 
         }
 
