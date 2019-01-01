@@ -2,6 +2,7 @@ package com.soft1841.sm.dao;
 
 import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Admin;
+import com.soft1841.sm.entity.Goods;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -37,8 +38,7 @@ public interface AdminDAO {
      * @return
      * @throws SQLException
      */
-    Entity getAdminById(Long jobId) throws SQLException;
-
+   Admin getAdminById(Long jobId) throws SQLException;
     /**
      * 根据工号更新管理员信息
      * @param jobId
@@ -54,5 +54,13 @@ public interface AdminDAO {
      * @return
      * @throws SQLException
      */
-    Admin getUserByName(Integer job_id) throws SQLException;
+    Admin getUserByName(Long job_id) throws SQLException;
+
+    /**
+     *
+     * @param address
+     * @return
+     * @throws SQLException
+     */
+    int countByAddress(String address) throws SQLException;
 }

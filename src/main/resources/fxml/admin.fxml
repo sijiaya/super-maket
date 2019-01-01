@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.AdminController"
             prefHeight="400.0" prefWidth="600.0">
-    <Label text="超级管理员" styleClass="font-title"/>
-    <padding>
-        <Insets left="10" top="50"/>
-    </padding>
     <FlowPane fx:id="flowPane" prefHeight="500" prefWidth="1000" AnchorPane.leftAnchor="50"
               AnchorPane.topAnchor="20">
     </FlowPane>

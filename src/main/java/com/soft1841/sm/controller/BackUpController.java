@@ -39,7 +39,7 @@ public class BackUpController implements Initializable {
         alert.close();
         alert.setContentText("备份成功，请到D盘根目录查看" );
         Runtime runtime = Runtime.getRuntime();
-        runtime.exec("cmd /k d:\\"+ sb.toString());
+        runtime.exec("cmd /k f:\\"+ sb.toString());
     }
 
 
@@ -47,7 +47,7 @@ public class BackUpController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         String backName = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date())+".sql";
         try {
-            BackUpController.dbBackUp("root","root","db_supermarket","d:/",backName);
+            BackUpController.dbBackUp("root","root","db_supermarket","f:/",backName);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -59,4 +59,9 @@ public class MemberDAOImpl implements MemberDAO {
         return memberList;
     }
 
+    @Override
+    public int countByIntegral(int integral) throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_members WHERE integral = ? ", integral).intValue();
+    }
+
 }

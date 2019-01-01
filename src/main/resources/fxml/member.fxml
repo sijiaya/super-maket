@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <?import javafx.scene.layout.AnchorPane?>
-
-
 <?import javafx.scene.layout.FlowPane?>
-<?import javafx.geometry.Insets?>
-<AnchorPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.MemberController">
-    <padding>
-        <Insets left="10" top="50"/>
-    </padding>
+<AnchorPane prefHeight="650.0" prefWidth="750.0"
+            xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.soft1841.sm.controller.MemberController">
     <FlowPane fx:id="memberPane" prefHeight="500" prefWidth="1000" AnchorPane.leftAnchor="50"
-              AnchorPane.topAnchor="10" >
+              AnchorPane.topAnchor="20">
     </FlowPane>
 </AnchorPane>

@@ -36,7 +36,12 @@
     /*鼠标样式*/
     -fx-cursor: pointer;
 }
-
+.bg1-theme{
+    -fx-background-color: rgb(219,219,219);
+}
+.bg-theme{
+    -fx-background-color: rgb(25, 25, 24);
+}
 /*鼠标覆盖按钮效果*/
 .btn-basic:hover {
     /*粗体*/
@@ -107,6 +112,13 @@
 /*内容盒子样式，设置一下圆角和内边距*/
 .box {
     -fx-border-color: rgb(162, 162, 162);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 5 5 5;
+}
+.box1{
+    -fx-border-color: #fff;
+    -fx-background-color: #fff;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-padding: 5 5 5 5;

@@ -61,4 +61,15 @@ public class MemberServiceImpl implements MemberService {
             System.err.println("删除会员出现异常");
         }
     }
+
+    @Override
+    public int countByIntegral(int integral) {
+        int result = 0;
+        try {
+            result = memberDAO.countByIntegral(integral);
+        } catch (SQLException e) {
+            System.err.println("根据积分统计会员信息出现异常");
+        }
+        return result;
+    }
 }

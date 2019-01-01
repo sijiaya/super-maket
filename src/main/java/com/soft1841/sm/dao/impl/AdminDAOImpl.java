@@ -36,8 +36,9 @@ public class AdminDAOImpl implements AdminDAO {
 
 
     @Override
-    public Entity getAdminById(Long jobId) throws SQLException {
-        return null;
+    public Admin getAdminById(Long jobId) throws SQLException {
+        Entity entity = Db.use().queryOne("SELECT * FROM t_admin where job_id = ? ", jobId);
+        return convertAdmin(entity);
     }
 
 
@@ -49,22 +50,29 @@ public class AdminDAOImpl implements AdminDAO {
 
     /**
      * 从数据库查询用户输入的用户名
+     *
      * @param job_id
      * @return
      * @throws SQLException
      */
     @Override
-    public Admin getUserByName(Integer job_id) throws SQLException {
+    public Admin getUserByName(Long job_id) throws SQLException {
         //定义entity返回类型，查询sql语句
         Entity entity = Db.use().queryOne("SELECT * FROM t_admin WHERE job_id = ?", job_id);
         //使用convertAdmin方法将entity型转为Admin
         return convertAdmin(entity);
     }
-    private Admin convertAdmin(Entity entity){
+
+    @Override
+    public int countByAddress(String address) throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_admin WHERE address = ? ", address).intValue();
+    }
+
+    private Admin convertAdmin(Entity entity) {
         //给Admin定义数据库中的列名
         Admin admin = new Admin(entity.getInt("id"),
-                entity.getInt("job_id"),entity.getStr("password"),
-                entity.getStr("name"),entity.getStr("avatar"),
+                entity.getLong("job_id"), entity.getStr("password"),
+                entity.getStr("name"), entity.getStr("avatar"),
                 entity.getStr("address"));
         return admin;
     }

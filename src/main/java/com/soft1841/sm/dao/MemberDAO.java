@@ -31,5 +31,12 @@ public interface MemberDAO {
      */
     List<Member> selectAllMember() throws SQLException;
 
+    /**
+     *
+     * @param integral
+     * @return
+     * @throws SQLException
+     */
+    int countByIntegral(int integral)throws SQLException;
 
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.sm.controller.UserController"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane AnchorPane.leftAnchor="0" AnchorPane.topAnchor="15" AnchorPane.bottomAnchor="0" styleClass="dark-theme"
+                prefWidth="150" prefHeight="610">
+        <VBox AnchorPane.leftAnchor="30" AnchorPane.topAnchor="90" prefWidth="100"
+              styleClass="dark-theme" spacing="50">
+            <Button text="管理员查看" onAction="#listAdmin" styleClass="blue-theme"/>
+            <Button text="会员查看" onAction="#listMember" styleClass="blue-theme"/>
+            <Button text="收银员查看" onAction="#listSeller" styleClass="blue-theme"/>
+        </VBox>
+    </AnchorPane>
+    <StackPane fx:id="stackPane"  AnchorPane.leftAnchor="180" AnchorPane.topAnchor="100"/>
+</AnchorPane>

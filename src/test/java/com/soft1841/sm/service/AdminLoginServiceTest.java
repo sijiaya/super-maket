@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 
 
 public class AdminLoginServiceTest {
-    private AdminLoginService adminLoginService = ServiceFactory.getAdminServiceInstance();
+    private AdminService adminLoginService = ServiceFactory.getAdminsServiceInstance();
 
 
     @Test

@@ -23,4 +23,10 @@ public interface MemberService {
      * @param number
      */
     void deleteMember(long number);
+    /**
+     *
+     * @param integral
+     * @return
+     */
+    int countByIntegral(int integral);
 }

@@ -20,8 +20,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class AdminController implements Initializable {
+    private static final int MAX_THREADS = 8;
+    //线程池配置
+    private final Executor exec = Executors.newFixedThreadPool(MAX_THREADS, runnable -> {
+        Thread t = new Thread(runnable);
+        t.setDaemon(true);
+        return t;
+    });
    @FXML
    private FlowPane flowPane;
     private AdminService adminService = ServiceFactory.getAdminsServiceInstance();
@@ -43,7 +52,14 @@ showAdmins(adminList);
             VBox leftBox = new VBox();
             leftBox.setAlignment(Pos.TOP_CENTER);
             leftBox.setSpacing(30);
-            ImageView imageView = new ImageView(new Image(admin.getAvatar()));
+            ImageView imageView = new ImageView();
+            //利用线程池来加载图片，并设置为读者头像
+            exec.execute(new Runnable() {
+                @Override
+                public void run() {
+                    imageView.setImage(new Image(admin.getAvatar()));
+                }
+            });
             imageView.setFitWidth(80);
             imageView.setFitHeight(80);
             Circle circle = new Circle();

@@ -18,4 +18,9 @@ public class AdminServiceTest {
     List<Admin> adminList = adminService.getAllAdmins();
     adminList.forEach(admin -> System.out.println(admin));
     }
+
+    @Test
+    public void getAdminByJob_ID() {
+        System.out.println(adminService.getAdminByJob_ID(111l));
+    }
 }

@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.GoodsController">
-    <HBox alignment="BOTTOM_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" spacing="10">
-        <Button styleClass="btn-basic,btn-radius-large,green-theme" text="添加货物" onAction="#newGoodsStage"/>
-        <Button styleClass="btn-basic,btn-radius-large,blue-theme" text="导出数据" onAction="#export"/>
-    </HBox>
-    <HBox alignment="CENTER" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="10" spacing="10">
-        <ComboBox promptText="选择商品类别" fx:id="typeComboBox" prefWidth="150"/>
-        <TextField promptText="请输入关键词" fx:id="keywordsField"/>
-        <Button styleClass="btn-basic,btn-radius-normal,green-theme" text="搜索" onAction="#search"/>
-    </HBox>
-    <TableView fx:id="goodsTable" prefWidth="1000"
-               AnchorPane.topAnchor="110" AnchorPane.leftAnchor="10">
-        <columns>
-            <TableColumn text="id">
-                <cellValueFactory>
-                    <PropertyValueFactory property="id"/>
-                </cellValueFactory>
-            </TableColumn>
-
-            <TableColumn text="名称">
-                <cellValueFactory>
-                    <PropertyValueFactory property="name"/>
-                </cellValueFactory>
-            </TableColumn>
-            <TableColumn text="价格">
-                <cellValueFactory>
-                    <PropertyValueFactory property="price"/>
-                </cellValueFactory>
-            </TableColumn>
-
-
-        </columns>
-    </TableView>
-
+            fx:controller="com.soft1841.sm.controller.GoodsLookController">
+    <AnchorPane AnchorPane.leftAnchor="0" AnchorPane.topAnchor="15" styleClass="dark-theme"
+                prefWidth="150" prefHeight="610">
+        <VBox AnchorPane.leftAnchor="30" AnchorPane.topAnchor="90" prefWidth="100"
+              styleClass="dark-theme" spacing="50">
+            <Button text="商品查看" onAction="#listGoodsLook" styleClass="blue-theme"/>
+            <!--<Button text="分类查看" onAction="#listAnalysis" styleClass="blue-theme"/>-->
+        </VBox>
+    </AnchorPane>
+    <StackPane fx:id="stackPane"  AnchorPane.leftAnchor="180" AnchorPane.topAnchor="100"/>
 </AnchorPane>

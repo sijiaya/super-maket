@@ -33,4 +33,8 @@ public class MemberServiceTest {
         System.out.println(memberService.addMember(member));
     }
 
+    @Test
+    public void countByInteral() {
+        System.out.println(memberService.countByIntegral(70));
+    }
 }

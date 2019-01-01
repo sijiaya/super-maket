@@ -1,13 +1,13 @@
 package com.soft1841.sm.entity;
 public class Admin {
     private Integer id;
-    private Integer job_id;
+    private Long job_id;
     private String password;
     private String name;
     private String avatar;
     private String address;
 
-    public Admin(Integer id, Integer job_id, String password, String name, String avatar, String address) {
+    public Admin(Integer id, Long job_id, String password, String name, String avatar, String address) {
         this.id = id;
         this.job_id = job_id;
         this.password = password;
@@ -27,11 +27,11 @@ public class Admin {
         this.id = id;
     }
 
-    public Integer getJob_id() {
+    public Long getJob_id() {
         return job_id;
     }
 
-    public void setJob_id(Integer job_id) {
+    public void setJob_id(Long job_id) {
         this.job_id = job_id;
     }
 
