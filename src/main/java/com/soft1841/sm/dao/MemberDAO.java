@@ -14,14 +14,6 @@ public interface MemberDAO {
      */
     Long insertMember(Member member) throws SQLException;
 
-    /**
-     *根据id删除会员
-     * @param id
-     * @return
-     * @throws SQLException
-     */
-    int deleteMemberById(Long id) throws SQLException;
-
 
 
     /**
@@ -30,6 +22,39 @@ public interface MemberDAO {
      * @throws SQLException
      */
     List<Member> selectAllMember() throws SQLException;
+
+    /**
+     * 更新会员信息
+     * @param member
+     * @return
+     * @throws SQLException
+     */
+    int updateMember(Member member) throws SQLException;
+
+
+    /**
+     * 通过会员号查询
+     * @param number
+     * @return
+     * @throws SQLException
+     */
+    Member getMemberByNumber(long number) throws SQLException;
+
+    /**
+     * 根据id删除会员
+     * @param number
+     * @throws SQLException
+     */
+    int deleteMemberById(String number) throws SQLException;
+
+    /**
+     *
+     * @param integral
+     * @return
+     * @throws SQLException
+     */
+    int countByIntegral(int integral)throws SQLException;
+
 
     /**
      *

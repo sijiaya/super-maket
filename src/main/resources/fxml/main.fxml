@@ -26,57 +26,57 @@
     </ImageView>
     <Button text="退出系统" onAction="#close" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20" styleClass="btn-radius-normal,warm-theme"/>
     <HBox prefHeight="90.0" prefWidth="550.0" AnchorPane.leftAnchor="0.0"  AnchorPane.topAnchor="0.0" styleClass="green-theme">
-         <Accordion >
-              <panes>
+        <Accordion >
+            <panes>
                 <TitledPane  animated="false" text="类别管理">
-                  <content>
-                      <VBox minHeight="100" spacing="5"  >
-                          <Button mnemonicParsing="false" text="类别查询" onAction="#listType" styleClass="bark-theme,btn-basic,btn-radius-normal"  prefHeight="10"/>
-                          <Button mnemonicParsing="false" text="统计分析" onAction="#listCount"  styleClass ="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
-                       </VBox>
-                  </content>
+                    <content>
+                        <VBox minHeight="100" spacing="5"  >
+                            <Button mnemonicParsing="false" text="类别查询" onAction="#listType" styleClass="bark-theme,btn-basic,btn-radius-normal"  prefHeight="10"/>
+                            <Button mnemonicParsing="false" text="统计分析" onAction="#listCount"  styleClass ="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                        </VBox>
+                    </content>
                 </TitledPane>
-              </panes>
-            </Accordion>
-            <Accordion>
-              <panes>
+            </panes>
+        </Accordion>
+        <Accordion>
+            <panes>
                 <TitledPane animated="false" text="商品管理">
-                  <content>
-                      <VBox   minHeight="100" spacing="5" >
-                          <Button mnemonicParsing="false" text="商品信息" onAction="#listGoods" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
-                          <Button mnemonicParsing="false" text="统计分析"  styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
-                      </VBox>
-                  </content>
+                    <content>
+                        <VBox   minHeight="100" spacing="5" >
+                            <Button mnemonicParsing="false" text="商品信息" onAction="#listGoods" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                            <Button mnemonicParsing="false" text="统计分析"  styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                        </VBox>
+                    </content>
                 </TitledPane>
-              </panes>
-            </Accordion>
-            <Accordion>
-              <panes>
+            </panes>
+        </Accordion>
+        <Accordion>
+            <panes>
                 <TitledPane animated="false" text="用户管理">
-                  <content>
-                    <VBox  minHeight="100" spacing="5"  >
-                        <Button mnemonicParsing="false" text="销售员"   onAction="#listSeller" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
-                        <Button mnemonicParsing="false" text="管理员" onAction="#listAdmin" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
-                        <Button mnemonicParsing="false" text="会员"  onAction="#listMember" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10" />
-                        <Button mnemonicParsing="false" text="统计"  styleClass="bark-theme,btn-basic,btn-radius-normal"/>
-                    </VBox>
-                  </content>
+                    <content>
+                        <VBox  minHeight="100" spacing="5"  >
+                            <Button mnemonicParsing="false" text="销售员"   onAction="#listSeller" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                            <Button mnemonicParsing="false" text="管理员" onAction="#listAdmin" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10"/>
+                            <Button mnemonicParsing="false" text="会员"  onAction="#listMember" styleClass="bark-theme,btn-basic,btn-radius-normal" prefHeight="10" />
+                            <Button mnemonicParsing="false" text="统计" onAction="#listUser" styleClass="bark-theme,btn-basic,btn-radius-normal"/>
+                        </VBox>
+                    </content>
                 </TitledPane>
-              </panes>
-            </Accordion>
-            <Accordion>
-               <panes>
-                  <TitledPane animated="false" text="系统维护">
-                     <content>
-                         <VBox  minHeight="100" spacing="5" >
-                              <Button mnemonicParsing="false" text="备份"  onAction="#backup" styleClass="bark-theme,btn-basic,btn-radius-normal"/>
-                         </VBox>
-                     </content>
-                  </TitledPane>
-               </panes>
-            </Accordion>
-      </HBox>
+            </panes>
+        </Accordion>
+        <Accordion>
+            <panes>
+                <TitledPane animated="false" text="系统维护">
+                    <content>
+                        <VBox  minHeight="100" spacing="5" >
+                            <Button mnemonicParsing="false" text="备份"  onAction="#backup" styleClass="bark-theme,btn-basic,btn-radius-normal"/>
+                        </VBox>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </HBox>
     <StackPane fx:id="MainController" prefHeight="290.0" AnchorPane.bottomAnchor="0"  AnchorPane.topAnchor="160" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" prefWidth="579.0" styleClass="green-theme" >
-             <fx:include source="default.fxml"/>
+        <fx:include source="default.fxml"/>
     </StackPane>
 </AnchorPane>

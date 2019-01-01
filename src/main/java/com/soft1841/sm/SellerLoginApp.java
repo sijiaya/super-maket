@@ -16,9 +16,11 @@ public class SellerLoginApp extends Application {
         //将当前主舞台传递给控制器对象
         controller.setPrimaryStage(primaryStage);
         primaryStage.setTitle("收银员登录");
-        Scene scene = new Scene(root,565,730);
+        //屏幕最大化
+        Scene scene = new Scene(root);
         scene.getStylesheets().add("/css/style.css");
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 

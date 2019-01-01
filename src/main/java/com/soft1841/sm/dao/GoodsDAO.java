@@ -33,6 +33,7 @@ public interface GoodsDAO {
      */
 
     List<Goods> selectGoodsByTypeId(int typeId) throws SQLException;
+    List<Goods> selectGoodsByBarcode(Long barcode)throws SQLException;
 
     /**
      * 根据商品名关键词模糊查询商品

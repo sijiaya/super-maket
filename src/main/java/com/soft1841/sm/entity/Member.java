@@ -1,30 +1,17 @@
 package com.soft1841.sm.entity;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Member {
     private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleLongProperty number = new SimpleLongProperty();
+    private final SimpleStringProperty number = new SimpleStringProperty();
     private final SimpleStringProperty name = new SimpleStringProperty();
     private final SimpleStringProperty address = new SimpleStringProperty();
     private final SimpleStringProperty phone = new SimpleStringProperty();
     private final SimpleStringProperty integral = new SimpleStringProperty();
 
     public Member() {
-    }
-
-    public String getIntegral() {
-        return integral.get();
-    }
-
-    public SimpleStringProperty integralProperty() {
-        return integral;
-    }
-
-    public void setIntegral(String integral) {
-        this.integral.set(integral);
     }
 
     public long getId() {
@@ -39,15 +26,15 @@ public class Member {
         this.id.set(id);
     }
 
-    public long getNumber() {
+    public String getNumber() {
         return number.get();
     }
 
-    public SimpleLongProperty numberProperty() {
+    public SimpleStringProperty numberProperty() {
         return number;
     }
 
-    public void setNumber(long number) {
+    public void setNumber(String number) {
         this.number.set(number);
     }
 
@@ -87,16 +74,15 @@ public class Member {
         this.phone.set(phone);
     }
 
+    public String getIntegral() {
+        return integral.get();
+    }
 
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", number=" + number +
-                ", name=" + name +
-                ", address=" + address +
-                ", phone=" + phone +
-                ", integral=" + integral +
-                '}';
+    public SimpleStringProperty integralProperty() {
+        return integral;
+    }
+
+    public void setIntegral(String integral) {
+        this.integral.set(integral);
     }
 }

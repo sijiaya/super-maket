@@ -11,11 +11,11 @@ public class MemberDAOTest {
     @Test
     public void insertMember() throws SQLException {
         Member member = new Member();
-        member.setNumber(2019007);
-        member.setName("李莉");
-        member.setAddress("浙江杭州");
-        member.setPhone("18893027961");
-        member.setIntegral("60");
+        member.setNumber("2019007");
+        member.setName("黄兴");
+        member.setAddress("江苏省南京市");
+        member.setPhone("18893027777");
+        member.setIntegral("80");
         System.out.println(memberDAO.insertMember(member));
 
     }
@@ -29,7 +29,21 @@ public class MemberDAOTest {
     }
     @Test
     public void deleteById() throws SQLException {
-        memberDAO.deleteMemberById((long) 1);
+        memberDAO.deleteMemberById("2019007");
+    }
+
+    @Test
+    public void updateMember() throws SQLException{
+        Member member = new Member();
+        member.setId(27);
+        member.setAddress("浙江省杭州市");
+        member.setPhone("18023424355");
+        member.setIntegral("150");
+        memberDAO.updateMember(member);
+    }
+    @Test
+    public void countByInIntegral() throws SQLException {
+int n= memberDAO.countByIntegral(70);
     }
     @Test
     public void countByInIntegral() throws SQLException {
