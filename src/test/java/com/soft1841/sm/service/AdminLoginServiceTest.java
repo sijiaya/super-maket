@@ -12,7 +12,7 @@ public class AdminLoginServiceTest {
 
     @Test
     public void login(){
-        boolean flag = adminLoginService.login(10001036,"aaa111");
+        boolean flag = adminLoginService.login(111,"aaa");
         assertEquals(true,flag);
     }
 

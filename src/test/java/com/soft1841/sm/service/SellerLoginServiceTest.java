@@ -11,7 +11,7 @@ public class SellerLoginServiceTest {
 
     @Test
     public void login() {
-        boolean flag = sellerLoginService.login("201802","Bbb222");
+        boolean flag = sellerLoginService.login("111","111");
         assertEquals(true,flag);
     }
 

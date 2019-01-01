@@ -67,7 +67,7 @@ public class MemberDAOImpl implements MemberDAO {
                         .set("address",member.getAddress())
                         .set("phone",member.getPhone())
                         .set("integral",member.getIntegral()),
-                Entity.create("t_member").set("id",member.getId())
+                Entity.create("t_member").set("number",member.getNumber())
         );
     }
 
@@ -101,8 +101,4 @@ public class MemberDAOImpl implements MemberDAO {
     public int countByIntegral(int integral) throws SQLException {
         return Db.use().queryNumber("SELECT COUNT(*) FROM t_member WHERE integral = ? ", integral).intValue();
     }
-
-
-
-
 }
