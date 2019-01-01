@@ -54,5 +54,6 @@ public interface GoodsService {
      */
     void deleteGoods(long id);
     int countByType(long typeId);
+    void updateGoods(Goods goods);
 }
 

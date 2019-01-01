@@ -89,6 +89,14 @@ public class GoodsServiceImpl implements GoodsService {
         }
         return result;
     }
+    @Override
+    public void updateGoods(Goods goods) {
+        try{
+            goodsDAO.updategoods(goods);
+        } catch (SQLException e) {
+            System.err.println("修改商品信息出现异常");
+        }
+    }
 }
 
 

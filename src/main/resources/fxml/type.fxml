@@ -9,8 +9,8 @@
     <VBox AnchorPane.leftAnchor="30" AnchorPane.topAnchor="90" prefWidth="100"
           styleClass="dark-theme" spacing="50">
         <Button text="分类查看" onAction="#listTypeLook" styleClass="blue-theme"/>
-        <Button text="分类查看" onAction="#listTypeAnalysis" styleClass="blue-theme"/>
+        <Button text="统计分析" onAction="#listTypeAnalysis" styleClass="blue-theme"/>
     </VBox>
     </AnchorPane>
-    <StackPane fx:id="stackPane"  AnchorPane.leftAnchor="150" AnchorPane.topAnchor="155"/>
+    <StackPane fx:id="stackPane"  AnchorPane.leftAnchor="120" AnchorPane.topAnchor="155"/>
 </AnchorPane>

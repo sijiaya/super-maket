@@ -8,8 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ScrollPane?>
 <AnchorPane prefHeight="497.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.soft1841.sm.controller.BackController">
+            fx:controller="com.soft1841.sm.controller.BackController"
+styleClass="box1">
    <children>
       <HBox layoutX="-7.0" prefHeight="100" styleClass="bg-theme" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
          <children>
@@ -86,10 +88,13 @@
                  </HBox.margin>
              </Button> </children>
       </HBox>
+       <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
+                   vbarPolicy="AS_NEEDED" styleClass="box"
+                   AnchorPane.rightAnchor="0" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="0"
+                   AnchorPane.bottomAnchor="0">
            <StackPane fx:id="stackPane"
-                      prefHeight="408.0"
-                      AnchorPane.rightAnchor="0" AnchorPane.topAnchor="83" AnchorPane.leftAnchor="0"
-                      AnchorPane.bottomAnchor="0">
+                      prefHeight="420.0">
            </StackPane>
+       </ScrollPane>
    </children>
 </AnchorPane>

@@ -59,6 +59,7 @@ public interface GoodsDAO {
      * @throws SQLException
      */
     int countByType( long typeId) throws SQLException;
+    int updategoods(Goods goods) throws SQLException;
 
 
 }

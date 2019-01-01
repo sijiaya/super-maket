@@ -19,13 +19,13 @@ public class MemberServiceTest {
 
     @Test
     public void deleteMemberById(){
-        memberService.deleteMember(25);
+        memberService.deleteMember("25");
     }
 
     @Test
     public void insertMember(){
         Member member = new Member();
-        member.setNumber(20180404);
+        member.setNumber("20180404");
         member.setName("李四");
         member.setAddress("浙江温州");
         member.setPhone("241475215");

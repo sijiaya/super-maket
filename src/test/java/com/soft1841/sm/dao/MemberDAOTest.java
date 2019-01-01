@@ -43,10 +43,6 @@ public class MemberDAOTest {
     }
     @Test
     public void countByInIntegral() throws SQLException {
-int n= memberDAO.countByIntegral(70);
-    }
-    @Test
-    public void countByInIntegral() throws SQLException {
         int n= memberDAO.countByIntegral(70);
         System.out.println(n);
         System.out.println(memberDAO.countByIntegral(70));

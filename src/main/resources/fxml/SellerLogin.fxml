@@ -34,8 +34,8 @@ fx:controller="com.soft1841.sm.controller.SellerLoginController">
 
             <Button alignment="CENTER" mnemonicParsing="false"
                     prefHeight="48.0" prefWidth="132.0" style="-fx-background-color: #87CEFA;"
-                    text="登   陆" textAlignment="CENTER" textFill="WHITE"
-                    onAction="#Login">
+                    text="登   录" textAlignment="CENTER" textFill="WHITE"
+                    onAction="#Login" fx:id="defaultButton" defaultButton="true" onKeyPressed="#loginBtnOnAction">
                <font>
                   <Font name="System Bold Italic" size="19.0" />
                </font>

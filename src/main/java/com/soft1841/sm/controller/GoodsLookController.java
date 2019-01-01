@@ -46,7 +46,7 @@ public class GoodsLookController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         AnchorPane anchorPane = null;
         try {
-            anchorPane = new FXMLLoader(getClass().getResource("/fxml/admin_analysis.fxml")).load();
+            anchorPane = new FXMLLoader(getClass().getResource("/fxml/type_analysis.fxml")).load();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -3,11 +3,9 @@ package com.soft1841.sm.controller;
  * 管理员登录控制器
  * @author sijia
  */
-
 import com.soft1841.sm.entity.Admin;
 import com.soft1841.sm.service.AdminService;
 import com.soft1841.sm.utils.ServiceFactory;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -24,13 +22,17 @@ public class AdminLoginController {
     //登录接口方法的引用
     private AdminService adminService = ServiceFactory.getAdminsServiceInstance();
     private Stage primaryStage;
+
     @FXML
-    public TextField account;
+    private TextField account;
+
     @FXML
     private PasswordField password;
+
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
+
     public void Login() throws IOException, InterruptedException {
         //获取用户输入的用户名和密码
         long job_id = Long.parseLong(account.getText().trim());
@@ -46,16 +48,15 @@ public class AdminLoginController {
             Thread.sleep(1000);
             alert.close();
             primaryStage.close();
+            Stage mainStage = new Stage();
             //查出该admin信息
             Admin admin = adminService.getAdminByJob_ID(job_id);
-            Stage mainStage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
-            AnchorPane root = loader.load();
-            BackController backController = loader.getController();
-            //将admin传到mainController
-            backController.setAdmin(admin);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/backstage.fxml"));
+            AnchorPane root = fxmlLoader.load();
+            BackController controller = fxmlLoader.getController();
+            controller.setAdmin(admin);
             //将当前主舞台传递给控制器对象
-            backController.setPrimaryStage(primaryStage);
+            controller.setPrimaryStage(primaryStage);
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/css/style.css");
             mainStage.getIcons().add(new Image("/img/logo.png"));
@@ -67,6 +68,14 @@ public class AdminLoginController {
             alert.setTitle("登录失败");
             alert.setContentText("密码错误或用户不存在，登录失败");
             alert.show();
+        }
+    }
+
+    public void loginBtnOnAction(){
+        try {
+            loginBtnOnAction();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

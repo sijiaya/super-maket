@@ -88,6 +88,15 @@ public  class GoodsDAOImpl implements GoodsDAO {
         return Db.use().queryNumber("SELECT COUNT(*) FROM t_goods WHERE type_id = ? ", typeId).intValue();
     }
 
+    @Override
+    public int updategoods(Goods goods) throws SQLException {
+        return Db.use().update(
+                Entity.create().set("number",goods.getNumber())
+                        .set("subtotal",goods.getSubtotal()),
+                Entity.create("t_goods").set("barcode",goods.getBarcode())
+        );
+    }
+
     private Goods convertGoods(Entity entity) {
         Goods goods = new Goods();
         goods.setId(entity.getLong("id"));

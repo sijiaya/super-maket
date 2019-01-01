@@ -9,7 +9,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -61,5 +60,14 @@ public class SellerLoginController {
             alert.show();
         }
 
+    }
+
+    @FXML
+    private void loginBtnOnAction() {
+        try {
+            loginBtnOnAction();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

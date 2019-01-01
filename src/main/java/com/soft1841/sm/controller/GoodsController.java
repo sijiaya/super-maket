@@ -97,7 +97,7 @@ public class GoodsController implements Initializable {
                 deleteButton.setOnAction(event -> {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setTitle("确认对话框");
-                    alert.setHeaderText("书名：" + goods.getName());
+                    alert.setHeaderText("商品名：" + goods.getName());
                     alert.setContentText("确定要删除这行记录吗?");
                     Optional<ButtonType> result = alert.showAndWait();
                     //点击了确认按钮，执行删除操作，同时移除一行模型数据

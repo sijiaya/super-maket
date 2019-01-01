@@ -54,7 +54,7 @@ public class MemberServiceImpl implements MemberService {
      * @param number
      */
     @Override
-    public void deleteMember(long number) {
+    public void deleteMember(String number) {
         try {
             memberDAO.deleteMemberById(number);
         }catch (SQLException e){

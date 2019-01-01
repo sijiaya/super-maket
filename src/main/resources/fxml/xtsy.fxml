@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!--系统收银fxml
-@Author LiuLian-->
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.control.Label?>
@@ -35,32 +31,36 @@
                      <PropertyValueFactory property="id"/>
                   </cellValueFactory>
                </TableColumn>
-                  <TableColumn text="barcoode">
+                  <TableColumn text="商品条码">
                      <cellValueFactory>
                         <PropertyValueFactory property="barcode"/>
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="name">
+                  <TableColumn text="名称">
                      <cellValueFactory>
                         <PropertyValueFactory property="name"/>
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="price">
+                  <TableColumn text="价格">
                      <cellValueFactory>
                         <PropertyValueFactory property="price"/>
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="vip">
+                  <TableColumn text="会员价">
                      <cellValueFactory>
                         <PropertyValueFactory property="vip"/>
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="number">
+                  <TableColumn text="数量">
                      <cellValueFactory>
                         <PropertyValueFactory property="number"/>
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn text="小计"/>
+                  <TableColumn text="小计">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="subtotal"/>
+                     </cellValueFactory>
+                  </TableColumn>
                </columns>
 
 
@@ -70,7 +70,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField   fx:id="numberTextField"  AnchorPane.bottomAnchor="110" AnchorPane.leftAnchor="140" prefHeight="31.0" prefWidth="113.0" />
+            <TextField   fx:id="numberTextField" onKeyPressed="#number" AnchorPane.bottomAnchor="110" AnchorPane.leftAnchor="140" prefHeight="31.0" prefWidth="113.0" />
             <Label AnchorPane.leftAnchor="10" AnchorPane.bottomAnchor="70" prefHeight="31.0" prefWidth="231.0" text="                网络正常" textFill="#616161">
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -83,7 +83,7 @@
                   <Font name="System Italic" size="20.0" />
                </font>
             </Label>
-            <Button  fx:id="dBtn"  AnchorPane.leftAnchor="270" AnchorPane.bottomAnchor="80" prefHeight="61.0" prefWidth="85.0" style="-fx-background-color: #00BFFF;" text="移除商品" textFill="WHITE">
+            <Button  fx:id="dBtn" onKeyPressed="#delete" AnchorPane.leftAnchor="270" AnchorPane.bottomAnchor="80" prefHeight="61.0" prefWidth="85.0" style="-fx-background-color: #00BFFF;" text="移除商品" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -128,11 +128,6 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-             <Label AnchorPane.bottomAnchor="35" AnchorPane.rightAnchor="10"   text="天庭神界连锁超市   " textFill="DEEPSKYBLUE"  >
-                 <font>
-                     <Font  size="80" />
-                 </font>
-             </Label>
          </children>
       </AnchorPane>
    </center>

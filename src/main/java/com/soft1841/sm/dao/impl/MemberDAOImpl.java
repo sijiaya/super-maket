@@ -19,7 +19,7 @@ public class MemberDAOImpl implements MemberDAO {
     private Member convertMember(Entity entity){
         Member member = new Member();
         member.setId(entity.getLong("id"));
-        member.setNumber(entity.getLong("number"));
+        member.setNumber(entity.getStr("number"));
         member.setName(entity.getStr("name"));
         member.setAddress(entity.getStr("address"));
         member.setPhone(entity.getStr("phone"));
@@ -40,12 +40,6 @@ public class MemberDAOImpl implements MemberDAO {
         );
     }
 
-    @Override
-    public int deleteMemberById(Long id) throws SQLException {
-        return Db.use().del(
-                Entity.create("t_members").set("id",id)
-        );
-    }
 
 
     @Override
@@ -57,6 +51,23 @@ public class MemberDAOImpl implements MemberDAO {
             memberList.add(convertMember(entity));
         }
         return memberList;
+    }
+
+    @Override
+    public int updateMember(Member member) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Member getMemberByNumber(long number) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public int deleteMemberById(String number) throws SQLException {
+        return Db.use().del(
+                Entity.create("t_members").set("id",number)
+        );
     }
 
     @Override

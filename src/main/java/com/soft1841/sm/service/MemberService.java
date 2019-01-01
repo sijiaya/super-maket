@@ -22,7 +22,7 @@ public interface MemberService {
      * 根据会员号删除
      * @param number
      */
-    void deleteMember(long number);
+    void deleteMember(String number);
     /**
      *
      * @param integral
